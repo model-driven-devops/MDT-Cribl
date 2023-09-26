@@ -162,7 +162,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - /:/hostfs:ro
       - certs:/usr/share/cribl/config/certs
-      - ./config:/local/cribl/
     privileged: true
     restart: unless-stopped
   
@@ -172,5 +171,5 @@ services:
     ports:
       - "57000:57000"
     volumes:
-      - ./conf/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
       - /var/run/docker.sock:/var/run/docker.sock
