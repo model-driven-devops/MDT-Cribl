@@ -1,2 +1,2 @@
-# MDT-Elastic
-Cisco Model-Driven-Telemetry using Telegraf, Cribl, and Elasticsearch
+# MDT-Cribl
+This repository contains the instructions and docker-compose file to send model-driven-telemetry through Cribl to Elasticsearch for visualization.
