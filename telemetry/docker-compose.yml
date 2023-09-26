@@ -162,6 +162,7 @@ version: "2.2"
       - /var/run/docker.sock:/var/run/docker.sock
       - /:/hostfs:ro
       - certs:/usr/share/cribl/config/certs
+      - ./cribl:/local/cribl/
     privileged: true
     restart: unless-stopped
   
