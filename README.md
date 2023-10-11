@@ -17,3 +17,76 @@ Adding the login information for elasticsearch:
 Turning off "Validate Certs". This can be added later.
 
 ![Screenshot 2023-09-26 at 4 04 57 PM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/064f37d2-a90b-4648-b56f-ebcdbe0cec7b)
+
+## Sample MDT Configs
+
+### Interface Statistics
+
+MDT Config
+```
+telemetry ietf subscription 1
+ encoding encode-kvgpb
+ filter xpath /interfaces-ios-xe-oper:interfaces/interface/statistics
+ source-address xx.xx.xx.xx
+ stream yang-push
+ update-policy periodic 500
+ receiver ip address xx.xx.xx.xx 57000 protocol grpc-tcp
+```
+
+Output
+
+```
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_tx_kbps",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_in_octets",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_in_unicast_pkts",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_in_errors",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_in_discards_64",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_out_octets_64",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_in_unknown_protos",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_out_octets",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_rx_pps",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_out_broadcast_pkts",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_out_multicast_pkts",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_out_errors",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_rx_kbps",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_num_flaps",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_in_multicast_pkts",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_in_discards",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_in_errors_64",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_tx_pps",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_in_crc_errors",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_in_unknown_protos_64",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_in_broadcast_pkts",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_out_unicast_pkts",
+"Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_out_discards"
+```
+### BGP
+
+BGP Neighbor Counters
+```
+telemetry ietf subscription 1
+ encoding encode-kvgpb
+ filter xpath /bgp-state-data/neighbors/neighbor/bgp-neighbor-counters
+ source-address xx.xx.xx.xx
+ stream yang-push
+ update-policy periodic 500
+ receiver ip address xx.xx.xx.xx 57000 protocol grpc-tcp
+```
+
+Output
+
+```
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters_sent/updates",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters_received/updates",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters_received/keepalives",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters_received/route_refreshes",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters_outq_depth",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters_sent/opens",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters_sent/notifications",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters_sent/keepalives",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters_sent/route_refreshes",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters_received/opens",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters_received/notifications",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters_inq_depth"
+```
+    
