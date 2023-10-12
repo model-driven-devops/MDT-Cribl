@@ -18,7 +18,7 @@ Turning off "Validate Certs". This can be added later.
 
 ![Screenshot 2023-09-26 at 4 04 57 PM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/064f37d2-a90b-4648-b56f-ebcdbe0cec7b)
 
-## Adding MDT Configs
+## Adding MDT subscriptions
 
 To add additional MDT subscriptions, All you need to do is modify your docker file and your telegraf config.
 
