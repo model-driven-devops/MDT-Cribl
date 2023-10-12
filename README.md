@@ -32,6 +32,17 @@ telemetry ietf subscription 1
  update-policy periodic 500
  receiver ip address xx.xx.xx.xx 57000 protocol grpc-tcp
 ```
+Specifying Interface
+
+```
+telemetry ietf subscription 1
+ encoding encode-kvgpb
+ filter xpath /interfaces-ios-xe-oper:interfaces/interface[name='GigabitEthernet8’]/statistics
+ source-address xx.xx.xx.xx
+ stream yang-push
+ update-policy periodic 500
+ receiver ip address xx.xx.xx.xx 57000 protocol grpc-tcp
+```
 
 Output
 
@@ -62,7 +73,7 @@ Output
 ```
 ### BGP
 
-BGP Neighbor Counters
+#### BGP Neighbor Counters
 ```
 telemetry ietf subscription 1
  encoding encode-kvgpb
@@ -89,4 +100,44 @@ Output
 "Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters_received/notifications",
 "Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters_inq_depth"
 ```
-    
+
+#### BGP Connection
+
+```
+telemetry ietf subscription 2
+ encoding encode-kvgpb
+ filter xpath /bgp-state-data/neighbors/neighbor/connection
+ source-address xx.xx.xx.xx
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address xx.xx.xx.xx 57001 protocol grpc-tcp
+```
+
+Output
+
+```
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/connection_total_established",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/connection_total_dropped"
+```
+
+#### BGP Prefix Activity
+
+```
+telemetry ietf subscription 2
+ encoding encode-kvgpb
+ filter xpath /bgp-state-data/neighbors/neighbor/prefix-activity/sent
+ source-address xx.xx.xx.xx
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address xx.xx.xx.xx 57001 protocol grpc-tcp
+```
+
+Output
+```
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/prefix-activity/sent_multipaths",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/prefix-activity/sent_current_prefixes",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/prefix-activity/sent_total_prefixes",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/prefix-activity/sent_implicit_withdraw",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/prefix-activity/sent_explicit_withdraw",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/prefix-activity/sent_bestpaths"
+```
