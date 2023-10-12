@@ -18,6 +18,44 @@ Turning off "Validate Certs". This can be added later.
 
 ![Screenshot 2023-09-26 at 4 04 57 PM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/064f37d2-a90b-4648-b56f-ebcdbe0cec7b)
 
+## Adding MDT Configs
+
+To add additional MDT subscriptions, All you need to do is modify your docker file and your telegraf config.
+
+#### telegraf config
+
+In your telegraf config, you need to copy and paste your input for each subscription. Each subscription requires a different port defined.
+
+```
+## Subscription 1
+[[inputs.cisco_telemetry_mdt]]
+  transport = "grpc"
+  service_address = ":57000"
+
+## Subscription 2
+[[inputs.cisco_telemetry_mdt]]
+  transport = "grpc"
+  service_address = ":57001"
+
+[[outputs.opentelemetry]]
+  service_address = "xx.xx.xx.xx:4317"
+```
+
+#### docker config
+
+Once you add your subscriptions to telegraf, you need to expose the new ports in your docker-config file:
+
+```
+telegraf:
+    container_name: telegraf
+    image: telegraf:latest
+    ports:
+      - "57000:57000"
+      - "57001:57001"
+    volumes:
+      - ./conf/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+```
 ## Sample MDT Configs
 
 ### Interface Statistics
