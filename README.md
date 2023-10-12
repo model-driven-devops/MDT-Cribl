@@ -184,3 +184,18 @@ Output
 "Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/prefix-activity/sent_explicit_withdraw",
 "Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/prefix-activity/sent_bestpaths"
 ```
+
+## EIGRP
+
+#### EIGRP Neighbor
+```
+telemetry ietf subscription 2
+ encoding encode-kvgpb
+ filter xpath /eigrp-oper-data/eigrp-instance/eigrp-interface/eigrp-nbr
+ source-address xx.xx.xx.xx
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address xx.xx.xx.xx 57001 protocol grpc-tcp
+```
+
+## Untested x-path
