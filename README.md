@@ -101,6 +101,49 @@ Output
 "Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters_inq_depth"
 ```
 
+#### BGP neighbor counters sent
+```
+telemetry ietf subscription 2
+ encoding encode-kvgpb
+ filter xpath /bgp-state-data/neighbors/neighbor/bgp-neighbor-counters/sent
+ source-address xx.xx.xx.xx
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address xx.xx.xx.xx 57001 protocol grpc-tcp
+```
+
+Output
+
+```
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters/sent_updates",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters/sent_notifications",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters/sent_keepalives",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters/sent_route_refreshes",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters/sent_opens"
+```
+
+#### BGP neighbor counters recieved
+
+```
+telemetry ietf subscription 1
+ encoding encode-kvgpb
+ filter xpath /bgp-state-data/neighbors/neighbor/bgp-neighbor-counters/received
+ source-address xx.xx.xx.xx
+ stream yang-push
+ update-policy periodic 1000
+ receiver ip address xx.xx.xx.xx 57001 protocol grpc-tcp
+```
+
+Output
+
+```
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters/received_keepalives",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters/received_route_refreshes",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters/received_opens",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters/received_updates",
+"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/bgp-neighbor-counters/received_notifications"
+```
+
 #### BGP Connection
 
 ```
