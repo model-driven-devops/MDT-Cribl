@@ -237,3 +237,37 @@ telemetry ietf subscription 2
 ```
 
 ## Untested x-path
+```
+/bgp-state-data/neighbors/neighbor/up-time
+/bgp-state-data/address-families/address-family/activities
+/bgp-state-data/bgp-route-vrfs/bgp-route-vrf/bgp-route-afs/bgp-route-af/bgp-route-neighbors
+/bgp-state-data/bgp-route-vrfs/bgp-route-vrf/bgp-route-afs/bgp-route-af/bgp-peer-groups
+```
+
+## On-Change Untested
+
+```
+ filter xpath /ios-events-ios-xe-oper:ospf-neighbor-state-change
+ filter xpath /ios:native
+ filter xpath /ios-events-ios-xe-oper:bgp-peer-state-change
+ filter xpath /ios-events-ios-xe-oper:ospf-neighbor-state-change
+ filter xpath /ios-events-ios-xe-oper:ospf-interface-state-change
+ filter xpath /ios-events-ios-xe-oper:interface-state-change
+ filter xpath /ios-events-ios-xe-oper:memory-usage
+ filter xpath /ios-events-ios-xe-oper:cpu-usage
+ filter xpath /ios-events-ios-xe-oper:interface-admin-state-change
+ filter xpath /ios-events-ios-xe-oper:sdcard-fault
+ filter xpath /ios-events-ios-xe-oper:system-reboot-complete
+ filter xpath /ios-events-ios-xe-oper:system-reboot-issued
+ filter xpath /ios-events-ios-xe-oper:flash-fault
+ filter xpath /ios-events-ios-xe-oper:system-login-change
+ filter xpath /ios-events-ios-xe-oper:system-logout-change
+ filter xpath /ios-events-ios-xe-oper:tempsensor-fault
+ filter xpath /ios-events-ios-xe-oper:disk-usage
+ filter xpath /ios-events-ios-xe-oper:usb-state-change
+ filter xpath /ios-events-ios-xe-oper:sfp-state-change
+ filter xpath /ios-events-ios-xe-oper:sfp-support-state
+ filter xpath /ios-events-ios-xe-oper:fantray-fault
+ filter xpath /ios-events-ios-xe-oper:fan-fault
+ filter xpath /ios-events-ios-xe-oper:tempsensor-state
+```
