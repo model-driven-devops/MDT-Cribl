@@ -6,10 +6,55 @@ This repository contains the docker-compose file to launch the following contain
 
 Values can be changed using the .env file.
 
+## Telegraf config
+
+In your telegraf config, you can add additional ports for telegraf to listen on. This isn't necessary, but it does help organize your subscriptions. I typically use different ports to catagorize my MDT subscriptions. For example 57000 will be for interface telemetry, 57001 will be for BGP telemetry, etc.
+
+```
+## Subscription 1
+[[inputs.cisco_telemetry_mdt]]
+  transport = "grpc"
+  service_address = ":57000"
+
+## Subscription 2
+[[inputs.cisco_telemetry_mdt]]
+  transport = "grpc"
+  service_address = ":57001"
+
+[[outputs.opentelemetry]]
+  service_address = "xx.xx.xx.xx:4317"
+```
+
+## Docker config
+
+Once you add your subscriptions to telegraf, you need to expose the new ports in your docker-config file:
+
+```
+telegraf:
+    container_name: telegraf
+    image: telegraf:latest
+    ports:
+      - "57000:57000"
+      - "57001:57001"
+    volumes:
+      - ./conf/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+```
+
 ## Setting Up Cribl
 
 This launches a single instance of cirbl-edge and does not pass any config files (Yet). Once you login to Cribl, you can add the OpenTelemetry source and Elasticsearch destination. The only settings that need to change are:
 
+### Open Telemetry Config
+
+Under the "Collect" tab, add a connector for "OpenTelemetry".
+
+![Screenshot 2023-11-01 at 8 30 10 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/586ea61d-64a5-4406-b6d4-ca59dfe9ef2e)
+
+
+
+
+### Elastic Config
 Adding the login information for elasticsearch:
 
 ![Screenshot 2023-09-26 at 4 03 47 PM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/7af60e7e-dead-49e4-abd4-e5f90e06dbec)
@@ -41,20 +86,7 @@ In your telegraf config, you need to copy and paste your input for each subscrip
   service_address = "xx.xx.xx.xx:4317"
 ```
 
-#### docker config
 
-Once you add your subscriptions to telegraf, you need to expose the new ports in your docker-config file:
-
-```
-telegraf:
-    container_name: telegraf
-    image: telegraf:latest
-    ports:
-      - "57000:57000"
-      - "57001:57001"
-    volumes:
-      - ./conf/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
-      - /var/run/docker.sock:/var/run/docker.sock
 ```
 ## Sample MDT Configs
 
