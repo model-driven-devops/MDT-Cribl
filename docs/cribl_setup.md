@@ -233,3 +233,16 @@ Under the “Add Function”, we are going to select “Eval”.
 <p align="center">
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/1ae1796d-caba-4773-8369-39c3c6653693" width="50%" height="50%">
 </p>
+
+To format all of our data to use the event breaker function, we are going to enter the following values for name and expression:
+- Name: _raw
+- Value Expression: JSON.stringify(instrumentation_library_metrics)
+  
+We are basically taking the entire schema that comes into cribl, placing it into a field called "raw" and turning it into one large string.
+
+If you’d like, you can go ahead and remove some of those empty fields as well. I added instrumentation_library_metrics, resource, unit, schema_url, and description just to clean 
+things up a bit
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/4681c530-79f1-4662-afd5-6f6d578c859e">
+</p>
