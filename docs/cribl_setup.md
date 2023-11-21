@@ -20,7 +20,10 @@ Once the container is deployed and listening on the default port of 4317, we nee
 "System", "General Settings", and "Default TLS Settings". We only need to turn off validate server certs to let Cribl trust data being sent by telegraf. Once you toggle this selection,
 the container will restart.
 
-![Screenshot 2023-11-20 at 2 05 20 PM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/e6a99bb4-c715-4ba0-a906-da48531998ba)
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/e6a99bb4-c715-4ba0-a906-da48531998ba" width="50%" height="50%">
+</p>
+
 
 ## OpenTelemetry Source
 
