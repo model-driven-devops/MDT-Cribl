@@ -264,3 +264,9 @@ Existing or New”, select “New” and then under “Event Breaker Type” sel
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/04daa8fe-5407-4982-acfb-ed98cd6dd833" width="30%" height="30%">
 </p>
 
+Now take a look at your data. That looks better doesn’t it? In this example, we now have the Statistics_tx_kbps as its own event. From this point forward, the world is your oyster 
+and you can cut up and manipulate your data however you want. Feel free to skip ahead or keep modifying your data.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/03217b7e-131e-488b-831d-9824e8dda312">
+</p>
