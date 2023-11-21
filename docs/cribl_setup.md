@@ -314,7 +314,20 @@ Once you save your function, take a look at how your data has changed:
 | --- | ---|
 | <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/94087c84-c0a0-4f41-bcd2-e921ab76f447"> | <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/2850ee35-69a3-4cb5-9e9d-d8b6ac8375e4"> |
 
-We now have each of those data points pulled to the top level for both of our telemetry streams. This will make it much easier to work with moving forward.
+Before we proceed, lets add one more field. Why? Well, when the data goes into elasticsearch, we want to easily identify what the value means. In our current data streams, we see a "name" field with a long path - Cisco-IOS-XE-interfaces-oper:interfaces/interface/statistics_in_errors_64. We don't need all that extra stuff. Select "add field" and as your "Value Expression" add the following:
+
+```
+name.substring(name.lastIndexOf('/') + 1)
+```
+
+This basically takes whatever is after the last "/" in your name field and gets rid of the other stuff. Next, we are going to take the new name and place it under the attributes field by using the following for "Name":
+
+```
+data.data_points[0].attributes.name
+```
+
+Why are we putting it there? Well later on, we will be using parsers to extract our remaining data, placing it under a field that identifies the type 
+of telemetry it is. For example, all bgp speceifc data will get placed under bgp.datapoint and SLA data will get placed under sla.datapoint. To easily visualize our data, we want the name to easily describe the value. By adding this field, we will eventually end up with interface.statistics_tx_kbps or bgp.
 
 ## Adding GeoPoint
 
@@ -334,13 +347,34 @@ ahead and added a city and state field as well.
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/8fda93a8-aa03-4027-94d2-c946bd289f24" width="60%" height="60%">
 </p>
 
-Now that we have our initial lookup columns set up, you can save it and open it again. When you open it, you'll have the option to change the "Edit Mode". Change it to "table" and 
-lets start adding our data. For our small topology, I am using the router name as the lookup field. If you are doing this for a larger topology, you can use any data field that is 
-being ingested.
+Now that we have our initial lookup columns set up, you can save it and open it again. When you open it, you'll have the option to change the "Edit Mode". Change 
+it to "table" and lets start adding our data. For our small topology, I am using the router name as the lookup field. If you are doing this for a larger topology, you can use any data field that is being ingested.
 
 <p align="center">
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c2c56b90-9cf1-4c59-9169-06812e8c9f82" width="60%" height="60%">
 </p>
 
+Now we have our lookup table done. All we need to do is add the lookup function and point it to our table. Since we've taken the time to elevate some of the data fields, all we have to do is match the "source" field in our data with the "source" field in the lookup table.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/f546849e-40af-4058-bda9-d17564339d8d" width="60%" height="60%">
+</p>
+
+Now look at our data! Each event has the city, state, latitude, and longitude added. 
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/b800e667-b38b-4647-b1c5-496351bc18f7" width="60%" height="60%">
+</p>
+
+### GeoPoint Eval Function
+
+Now you would think sending fields titled "latitude" and "longitude" to elasticsearch would let you create amazing map visualizations, but no. There is more work to be done. There are many ways to do this, but since we are becoming cribl pipeline experts lets keep moving. For elasticsearch to recognize geopoint data, it needs to be sent in the correct format. Use another Eval function to merge the latitude and longitude into a single field called location. Make sure you use the + sign before both, otherwise they will be sent as a string.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/e8e031aa-573e-4ba9-9512-04fc05493ad5" width="60%" height="60%">
+</p>
+
+Placeholder. Need to figure out if Elasticsearch needs to be prepped.
 
 ## Adding Parsers
+
