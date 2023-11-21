@@ -390,3 +390,8 @@ Placeholder. Need to figure out if Elasticsearch needs to be prepped.
 
 ## Adding Parsers
 
+Alright, we're almost done. Now it's time to add our parsers to drop the rest of the data points into telemetry specefic catagories.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/a4c8cf43-23a7-4450-b56e-211a73fb32af" width="60%" height="60%">
+</p>
