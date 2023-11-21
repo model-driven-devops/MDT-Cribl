@@ -338,6 +338,7 @@ connection_total_dropped.
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/1bea7a9b-be96-42c0-aae0-89651fe1503f" width="60%" height="60%">
 </p>
 
+Now isn't that beautiful. Under our attributes field, 
 
 
 ## Adding GeoPoint
