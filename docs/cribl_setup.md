@@ -410,5 +410,11 @@ and our destination will simply be "bgp".
 We can also remove the source and path field since we already have those elevated. Now take a look at our data!
 
 <p align="center">
-<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/a42fa6d1-4d89-4c77-925e-9ad1cec94cb4">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/a42fa6d1-4d89-4c77-925e-9ad1cec94cb4" width="60%" height="60%">
+</p>
+
+Go ahead and add a similar parser for each of your telemetry paths. Your pipeline should end up looking something like this:
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/7922ae4c-7da6-476a-a68d-7d56324d4c65" width="60%" height="60%">
 </p>
