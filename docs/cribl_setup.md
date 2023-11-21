@@ -179,6 +179,12 @@ Enough with the problems, lets talk about the solution!
 
 Cribl has extremely powerful built in functions, and I tried just about everything before figuring this out. The JSON event breaker is where we want to start. This basically lets you 
 define a field in your schema and when data runs through your pipeline, cribl will break each of those fields into their own events. For example, the massive interface statistic 
-schema above is treated as one event. You’ll notice that the path to the data we need is under the <i>instrumentation_library_metrics[0].metrics[0]</i> field. If we set our event breaker to 
-the metrics field, we should get separate events we can filter on. 
+schema above is treated as one event. You’ll notice that the path to the data we need is under the <i>instrumentation_library_metrics[0].metrics[0]</i> field. If we set our event 
+breaker to the metrics field, we should get separate events we can filter on. 
 
+You may be thinking “No duh. Why wasn’t this the first thing you tried?”. Well it was and it didn’t work. Why didn’t it work? because dealing with JSON schema and streaming data 
+makes my eyes bleed so I failed to notice this “Limitations” notice in the documentation:
+
+https://docs.cribl.io/stream/event-breaker-function/
+
+> The Event Breaker Function operates only on data in _raw. For other events, move the array to _raw and stringify it before applying this Function.
