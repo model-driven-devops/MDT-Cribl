@@ -5,6 +5,7 @@
   * [OpenTelemetry Source]
   * [ElasticSearch Destination]
 * [Pipeline Creation]
+  * [Challenges]
   * [Eval Function]
   * [Event Breaker Function]
   * [Additional Transformation]
@@ -72,15 +73,19 @@ Password will match whatever you defined in your docker config.
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/4c5e1b01-3cbf-41fd-91aa-b14df06fb49b" width="40%" height="40%">
 </p>
 
-And of course, because we all love to sacrifice security for productivity, select the advanced settings and turn off "validate server certs". Once you're done you can go ahead and select add or save.
+And of course, because we all love to sacrifice security for productivity, select the advanced settings and turn off "validate server certs". Once you're done you can go ahead and 
+select add or save.
 
 <p align="center">
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/59fef724-e396-4676-9c04-f86ba102b27b" width="40%" height="40%">
 </p>
 
-We are not sending any data yet, but you should be able to select "Logs" and check if cribl was able to establish a connection to ElasticSearch. If not, we can kick the can down the road and worry about troubleshooting that later.
+We are not sending any data yet, but you should be able to select "Logs" and check if cribl was able to establish a connection to ElasticSearch. If not, we can kick the can down the 
+road and worry about troubleshooting that later.
 
-## Create Your Pipleine
+## Pipeline Creation
+
+### Challenges
 
 Now this is the fun and frustrating part of telemetry. We need to make our data useful. If you don’t take time to do this, you’ll spend cycles trying to create 
 visualizations that will never tell the story you really want to tell. This gets tricky with MDT and OpenTelemetry, because the data is sent as one 
@@ -169,3 +174,11 @@ and so on. Not only do visualizations become extremely hard to create, but using
 iterate through the array is frustrating. 
 
 Enough with the problems, lets talk about the solution!
+
+### Event Breaker
+
+Cribl has extremely powerful built in functions, and I tried just about everything before figuring this out. The JSON event breaker is where we want to start. This basically lets you 
+define a field in your schema and when data runs through your pipeline, cribl will break each of those fields into their own events. For example, the massive interface statistic 
+schema above is treated as one event. You’ll notice that the path to the data we need is under the <i>instrumentation_library_metrics[0].metrics[0]</i> field. If we set our event breaker to 
+the metrics field, we should get separate events we can filter on. 
+
