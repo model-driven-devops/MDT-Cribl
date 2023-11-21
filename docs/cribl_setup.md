@@ -9,6 +9,7 @@
   * [Preparing Data](#preparing-data)
   * [Eval Function](#eval-function)
   * [Event Breaker Function](#event-breaker-function)
+  * [Baseline Eval Function](#baseline-eval-function)
   * [Adding GeoPoint](#adding-geopoint)
 * [Sending to ElasticSearch]
 
@@ -270,6 +271,36 @@ and you can cut up and manipulate your data however you want. Feel free to skip 
 <p align="center">
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/03217b7e-131e-488b-831d-9824e8dda312">
 </p>
+
+## Baseline Eval Function
+
+Now we have our data broken apart into individual events (woohoo!), lets start extracting the fields from our _raw schema that are consistant across all our different telemetry 
+streams. This will make adding things like geopoints and parsers much easier to work with. Start by adding a new Eval function.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/2e80ff99-edc8-4899-ac78-66e265d9598a" width="50%" height="50%">
+</p>
+
+You can see in the screenshot, I used the full data path as my value expression to identifify what specefic field I was targeting. For example, the device name is nested under 
+data.data_points[0].attributes.source. If you need to figure out your full data path, you can use the "simple preview" and expand each field until you find the fields you want to 
+extract.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/17e34db3-9367-4ae2-9119-87873bc8cea6" width="60%" height="60%">
+</p>
+
+For our baseline eval function, we only want to elevate the fields that are consistant across all of our telemetry events because this function will be applied to all telemetry data coming through this pipeline. We can use the filter later to make adjustments to our speceific data streams. Below is an example of the SLA event. 
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/0d68d3ae-c910-416e-8605-6c89d9631f1d" width="60%" height="60%">
+</p>
+
+You can see the fields consistent across both the interface event and SLA event are:
+
+- data.data_points[0].value
+- data.data_points[0].attributes.source
+- data.data_points[0].attributes.name
+- data.data_points[0].attributes.path
 
 ## Adding GeoPoint
 
