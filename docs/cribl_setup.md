@@ -286,13 +286,13 @@ data.data_points[0].attributes.source. If you need to figure out your full data 
 extract.
 
 <p align="center">
-<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/17e34db3-9367-4ae2-9119-87873bc8cea6" width="60%" height="60%">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/1291467d-6ed0-49ab-be6d-145275f18f22" width="60%" height="60%">
 </p>
 
 For our baseline eval function, we only want to elevate the fields that are consistant across all of our telemetry events because this function will be applied to all telemetry data coming through this pipeline. We can use the filter later to make adjustments to our speceific data streams. Below is an example of the SLA event. 
 
 <p align="center">
-<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/0d68d3ae-c910-416e-8605-6c89d9631f1d" width="60%" height="60%">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/17e34db3-9367-4ae2-9119-87873bc8cea6" width="60%" height="60%">
 </p>
 
 You can see the fields consistent across both the interface event and SLA event are:
