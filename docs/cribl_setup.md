@@ -290,10 +290,12 @@ ahead and added a city and state field as well.
 </p>
 
 Now that we have our initial lookup columns set up, you can save it and open it again. When you open it, you'll have the option to change the "Edit Mode". Change it to "table" and 
-lets start adding our data.
+lets start adding our data. For our small topology, I am using the router name as the lookup field. If you are doing this for a larger topology, you can use any data field that is 
+being ingested.
 
 <p align="center">
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c2c56b90-9cf1-4c59-9169-06812e8c9f82" width="60%" height="60%">
 </p>
+
 
 ## Adding Parsers
