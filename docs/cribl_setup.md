@@ -54,3 +54,27 @@ Itâ€™s worth while to copy this expression since we can use it later to filter â
 <p align="center">
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/67222c09-9144-4c36-98aa-c496372b09b7" width="40%" height="40%">
 </p>
+
+## ElasticSearch Destination
+
+While we are setting up our source, we may as well set up our elasticsearch destination. I would highely recommend not sending data to it until you create your
+pipeline though. Back in your collect menu, select "add destination". Find the option to add "ElasticSearch".
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/d62a5431-bab0-4292-a041-927bd52546bb" width="40%" height="40%">
+</p>
+
+The settings are pretty straight forward (just like OpenTelemetry). The URL to send data to your Elastic API is https://es01:9200/_bulk. We are able to use es01 since 
+all our containers are running on the same host. Name the data stream anything you'd like. You can give it a clever name like "Telemetry" or "mdt". The Username and
+Password will match whatever you defined in your docker config. 
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/4c5e1b01-3cbf-41fd-91aa-b14df06fb49b" width="40%" height="40%">
+</p>
+
+And of course, because we all love to sacrifice security for productivity, select the advanced settings and turn off "validate server certs". 
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/59fef724-e396-4676-9c04-f86ba102b27b" width="40%" height="40%">
+</p>
+
