@@ -228,3 +228,8 @@ You should see the data start to come in. Based on the number you set in the eve
 
 ## Eval Function
 
+Under the “Add Function”, we are going to select “Eval”.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/1ae1796d-caba-4773-8369-39c3c6653693" width="50%" height="50%">
+</p>
