@@ -11,6 +11,8 @@
   * [Event Breaker Function](#event-breaker-function)
   * [Baseline Eval Function](#baseline-eval-function)
   * [Adding GeoPoint](#adding-geopoint)
+  * [Adding Parsers](#adding-parsers)
+  * [Clean Up](#clean-up)
 * [Sending to ElasticSearch]
 
 # Cribl Setup
@@ -417,4 +419,18 @@ Go ahead and add a similar parser for each of your telemetry paths. Your pipelin
 
 <p align="center">
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/7922ae4c-7da6-476a-a68d-7d56324d4c65" width="60%" height="60%">
+</p>
+
+## Clean Up
+
+One final eval function to clean everything up should do it. All we want to do is remove the fields we aren't using anymore. 
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/4d78f5a3-c9fe-490d-a4bf-e8e18289dba3" width="60%" height="60%">
+</p>
+
+Now doesn't that look better!
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/a3758e61-27a4-4a38-86d5-4bf40f4fd736" width="60%" height="60%">
 </p>
