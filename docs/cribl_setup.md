@@ -273,11 +273,27 @@ and you can cut up and manipulate your data however you want. Feel free to skip 
 
 ## Adding GeoPoint
 
-If you are like me, you appreciate good visuals. I love when I can see data on a map. To do so, you need to feed elasticsearch a GeoPoint for each device. This is not super easy to do and there isn't really anything built into cribl ourside of the GeoIP function, which for private networks isn't really useful. To add a GeoPoint as part of your pipeline, we need to use two deperate functions. First, we need to create a lookup table. In Cribl, navigate to "More" and select "Knowledge". 
+If you are like me, you appreciate good visuals. I love when I can see data on a map. To do so, you need to feed elasticsearch a GeoPoint for each device. This is not super easy to 
+do and there isn't really anything built into cribl ourside of the GeoIP function, which for private networks isn't really useful. To add a GeoPoint as part of your pipeline, we need 
+to use two deperate functions. First, we need to create a lookup table. In Cribl, navigate to "More" and select "Knowledge". 
 
 <p align="center">
-<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/3308c2fc-dfe7-47f5-817f-56ba5cd8088c" width="%40" height="40%">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/3308c2fc-dfe7-47f5-817f-56ba5cd8088c" width="60%" height="60%">
+</p>
+
+Select "Add Lookup File". You'll have the choice of uploading a csv or creating a new text file. In this scenario, select the new text file. I find it easier to set up the headers, 
+saving it, and then editing the file instead of editing it as a text file. At a minimum, we need a field to contain our lookup data and a field for latitude and longitude. I went 
+ahead and added a city and state field as well.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/8fda93a8-aa03-4027-94d2-c946bd289f24" width="60%" height="60%">
+</p>
+
+Now that we have our initial lookup columns set up, you can save it and open it again. When you open it, you'll have the option to change the "Edit Mode". Change it to "table" and 
+lets start adding our data.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c2c56b90-9cf1-4c59-9169-06812e8c9f82" width="60%" height="60%">
 </p>
 
 ## Adding Parsers
-
