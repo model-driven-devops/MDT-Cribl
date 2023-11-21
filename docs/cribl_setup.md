@@ -175,7 +175,7 @@ iterate through the array is frustrating.
 
 Enough with the problems, lets talk about the solution!
 
-### Event Breaker
+## Eval Function
 
 Cribl has extremely powerful built in functions, and I tried just about everything before figuring this out. The JSON event breaker is where we want to start. This basically lets you 
 define a field in your schema and when data runs through your pipeline, cribl will break each of those fields into their own events. For example, the massive interface statistic 
@@ -207,4 +207,14 @@ Now we want to capture some sample data to test against as we create our pipelin
 
 <p align="center">
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/b1448a00-bced-4e3f-8c03-eb1c390b06e7" width="50%" height="50%">
+</p>
+
+Once you select capture data, you can use that expression you copied earlier to only capture the OpenTelemetry data.
+
+```
+__inputId=='open_telemetry:1'
+```
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/65abf433-6c09-4a38-bc75-ec904cf427cd" width="50%" height="50%">
 </p>
