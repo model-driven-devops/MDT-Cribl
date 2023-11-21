@@ -1,14 +1,14 @@
 # Table of Contents
 
-* [Cribl Setup]
-  * [Initial Settings]
-  * [OpenTelemetry Source]
-  * [ElasticSearch Destination]
-* [Pipeline Creation]
-  * [Challenges]
-  * [Preparing Data]
-  * [Eval Function]
-  * [Event Breaker Function]
+* [Cribl Setup](cribl_setup)
+  * [Initial Settings](#initial-settings)
+  * [OpenTelemetry Source](#opentelemetry-source)
+  * [ElasticSearch Destination](#elasticsearch-destination)
+* [Pipeline Creation](#pipeline-creation)
+  * [Challenges](#challenges)
+  * [Preparing Data](#preparing-data)
+  * [Eval Function](#eval-function)
+  * [Event Breaker Function](#event-breaker-function)
   * [Additional Transformation]
 * [Sending to ElasticSearch]
 
