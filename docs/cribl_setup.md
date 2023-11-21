@@ -272,5 +272,12 @@ and you can cut up and manipulate your data however you want. Feel free to skip 
 </p>
 
 ## Adding GeoPoint
+
+If you are like me, you appreciate good visuals. I love when I can see data on a map. To do so, you need to feed elasticsearch a GeoPoint for each device. This is not super easy to do and there isn't really anything built into cribl ourside of the GeoIP function, which for private networks isn't really useful. To add a GeoPoint as part of your pipeline, we need to use two deperate functions. First, we need to create a lookup table. In Cribl, navigate to "More" and select "Knowledge". 
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/3308c2fc-dfe7-47f5-817f-56ba5cd8088c" width="%40" height="40%">
+</p>
+
 ## Adding Parsers
 
