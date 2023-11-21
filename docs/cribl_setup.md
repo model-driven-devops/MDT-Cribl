@@ -238,11 +238,19 @@ To format all of our data to use the event breaker function, we are going to ent
 - Name: _raw
 - Value Expression: JSON.stringify(instrumentation_library_metrics)
   
-We are basically taking the entire schema that comes into cribl, placing it into a field called "raw" and turning it into one large string.
-
-If you’d like, you can go ahead and remove some of those empty fields as well. I added instrumentation_library_metrics, resource, unit, schema_url, and description just to clean 
+We are basically taking the entire schema that comes into cribl, placing it into a field called "raw" and turning it into one large string. If you’d like, you can go ahead and remove 
+some of those empty fields as well. I added instrumentation_library_metrics, resource, unit, schema_url, and description just to clean 
 things up a bit
 
 <p align="center">
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/4681c530-79f1-4662-afd5-6f6d578c859e">
 </p>
+
+Once you save your initial function, take a look at the preview of your data. On the top you’ll see a toggle for IN/OUT. If you select OUT, you will see what the output of your 
+function is. Now you will notice you have a raw field with all your data and the instrumentation_library_metrics field has been removed. The data is also grouped together as opposed 
+to before the pipeline, where you could drill down into the schema. We basically turned it into a giant string.
+
+| Before Function | After Function |
+| --- | ---|
+| <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/71b677f1-bf7c-44f5-a5c8-450587bce90b"> | <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/50c6c628-3255-4132-834a-59353ddfb6f4"> |
+
