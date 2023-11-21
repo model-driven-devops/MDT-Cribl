@@ -6,6 +6,7 @@
   * [ElasticSearch Destination]
 * [Pipeline Creation]
   * [Challenges]
+  * [Preparing Data]
   * [Eval Function]
   * [Event Breaker Function]
   * [Additional Transformation]
@@ -175,7 +176,7 @@ iterate through the array is frustrating.
 
 Enough with the problems, lets talk about the solution!
 
-## Eval Function
+## Preparing data
 
 Cribl has extremely powerful built in functions, and I tried just about everything before figuring this out. The JSON event breaker is where we want to start. This basically lets you 
 define a field in your schema and when data runs through your pipeline, cribl will break each of those fields into their own events. For example, the massive interface statistic 
@@ -218,3 +219,12 @@ __inputId=='open_telemetry:1'
 <p align="center">
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/65abf433-6c09-4a38-bc75-ec904cf427cd" width="50%" height="50%">
 </p>
+
+You should see the data start to come in. Based on the number you set in the event capture, you should see that amount of events. Save the sample file.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c3de4fe4-d2fa-4abd-a4ad-df5a50535bae" width="50%" height="50%">
+</p>
+
+## Eval Function
+
