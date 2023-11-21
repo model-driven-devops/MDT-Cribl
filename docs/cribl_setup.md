@@ -308,6 +308,14 @@ Here is a closer screenshot of the mapping. You can change the names to whatever
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/0a7d9260-ab77-4ae1-98f7-14f5830c3679" width="60%" height="60%">
 </p>
 
+Once you save your function, take a look at how your data has changed:
+
+| SLA Telemetry | Interface Telemetry |
+| --- | ---|
+| <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/94087c84-c0a0-4f41-bcd2-e921ab76f447"> | <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/2850ee35-69a3-4cb5-9e9d-d8b6ac8375e4"> |
+
+We now have each of those data points pulled to the top level for both of our telemetry streams. This will make it much easier to work with moving forward.
+
 ## Adding GeoPoint
 
 If you are like me, you appreciate good visuals. I love when I can see data on a map. To do so, you need to feed elasticsearch a GeoPoint for each device. This is not super easy to 
