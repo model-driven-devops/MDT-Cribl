@@ -302,6 +302,12 @@ You can see the fields consistent across both the interface event and SLA event 
 - data.data_points[0].attributes.name
 - data.data_points[0].attributes.path
 
+Here is a closer screenshot of the mapping. You can change the names to whatever you want here. For example, I changed the "name" field to "interface".
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/0a7d9260-ab77-4ae1-98f7-14f5830c3679" width="60%" height="60%">
+</p>
+
 ## Adding GeoPoint
 
 If you are like me, you appreciate good visuals. I love when I can see data on a map. To do so, you need to feed elasticsearch a GeoPoint for each device. This is not super easy to 
