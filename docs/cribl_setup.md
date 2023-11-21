@@ -254,3 +254,13 @@ to before the pipeline, where you could drill down into the schema. We basically
 | --- | ---|
 | <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/71b677f1-bf7c-44f5-a5c8-450587bce90b"> | <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/50c6c628-3255-4132-834a-59353ddfb6f4"> |
 
+## Event Breaker Function
+
+Now that we have the data in the corrected format, we can use the event breaker to turn the single event, large schema into a series of small events. We can select the same “Add 
+Function” field. In any of these functions, you can use a filter to get more granular, but since we are just working with all data coming in, we can keep it set to true. “Under 
+Existing or New”, select “New” and then under “Event Breaker Type” select JSON Array. We want to target the “Metrics” field as our breaker. You can leave everything else as default.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/04daa8fe-5407-4982-acfb-ed98cd6dd833" width="30%" height="30%">
+</p>
+
