@@ -188,3 +188,23 @@ makes my eyes bleed so I failed to notice this “Limitations” notice in the d
 https://docs.cribl.io/stream/event-breaker-function/
 
 > The Event Breaker Function operates only on data in _raw. For other events, move the array to _raw and stringify it before applying this Function.
+
+It just so happens our data is not in _raw and not stringified, so the first thing we need to do is put it in _raw and stringify it. In your collect window, mouse over the middle of 
+the line connecting your source and destination. You will see the “pipeline” box. Go ahead and select it.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/110b4c22-5a14-4a80-85e4-1c804ac37834" width="40%" height="40%">
+</p>
+
+You’ll be presented with the option of a bunch of pre-built pipelines created by engineers who probably ran into all the same issues we ran into. You can use your main pipeline, or 
+you can create a new one by selecting “Create Pipeline” in the top right corner.
+
+<p align="center">
+ <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/8509baec-cbf6-438c-95c6-6d7265deeb4c" width="50%" height="50%" alt="Pipeline Creation Window">
+</p>
+
+Now we want to capture some sample data to test against as we create our pipeline. Select “Capture Data”.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/b1448a00-bced-4e3f-8c03-eb1c390b06e7" width="50%" height="50%">
+</p>
