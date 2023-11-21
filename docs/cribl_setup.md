@@ -327,7 +327,15 @@ data.data_points[0].attributes.name
 ```
 
 Why are we putting it there? Well later on, we will be using parsers to extract our remaining data, placing it under a field that identifies the type 
-of telemetry it is. For example, all bgp speceifc data will get placed under bgp.datapoint and SLA data will get placed under sla.datapoint. To easily visualize our data, we want the name to easily describe the value. By adding this field, we will eventually end up with interface.statistics_tx_kbps or bgp.
+of telemetry it is. For example, all bgp speceifc data will get placed under bgp.datapoint and SLA data will get placed under sla.datapoint. To easily visualize 
+our data, we want the name to easily describe the value. By adding this field, we will eventually end up with interface.statistics_tx_kbps or bgp.
+connection_total_dropped.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/2d9bb41f-4704-400d-b56e-a07e90419b0f" width="60%" height="60%">
+</p>
+
+
 
 ## Adding GeoPoint
 
