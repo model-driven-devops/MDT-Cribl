@@ -157,16 +157,15 @@ You’ll notice a few things (or maybe you won’t so I’ll point it out).
 - There is a lot of useless data and data fields. The resource, __type, and instrumentation library fields are not even giving us any actual data. 
 - Everything is buried under the “instrumentation_library_metrics" field, which is a very annoying name to use when you’re creating visualizations because whether
 its interface statistics or SLA telemetry, it all gets put under this field.
-- The simple data we need is distributed in multiple arrays. If we want to see the <b>statistics_tx_kbps</b> for the <b>site1-rtr1</b> router coming in from <b>GigabitEthernet2</b>, eachpiece of data is different layers of the schema.
-
-The name of the statistic is under instrumentation_library_metrics[0].metrics[0].name and displayed as the full xpath.
-
-The name of the device is under instrumentation_library_metrics[0].metrics[0].data.data_points[0].attributes.source
-
-The value associated with statistics_tx_kbps is under instrumentation_library_metrics[0].metrics[0].data.data_points[0].value
-
-To make this more challenging, because the arrays are embedded, you need to use the number to identify where in the array your data is. For example the value of statistics_num_flaps would be instrumentation_library_metrics[0].metrics[1].data.data_points[1].value. The next data point would be instrumentation_library_metrics[0].metrics[2].data.data_points[2].value and so on.
-
-Not only do visualizations become extremely hard to create, but using any standard function to break apart the data without having to write javascript expressions that iterate through the array is frustrating. 
+- The simple data we need is distributed in multiple arrays. If we want to see the <b>statistics_tx_kbps</b> for the <b>site1-rtr1</b> router coming in from <b>GigabitEthernet2</b>,
+  eachpiece of data is different layers of the schema.
+  - The name of the statistic is under instrumentation_library_metrics[0].metrics[0].name and displayed as the full xpath.
+  - The name of the device is under instrumentation_library_metrics[0].metrics[0].data.data_points[0].attributes.source
+  - The value associated with statistics_tx_kbps is under instrumentation_library_metrics[0].metrics[0].data.data_points[0].value
+ 
+To make this more challenging, because the arrays are embedded, you need to use the number to identify where in the array your data is. For example the value of statistics_num_flaps
+would be instrumentation_library_metrics[0].metrics[1].data.data_points[1].value. The next data point would be instrumentation_library_metrics[0].metrics[2].data.data_points[2].value
+and so on. Not only do visualizations become extremely hard to create, but using any standard function to break apart the data without having to write javascript expressions that 
+iterate through the array is frustrating. 
 
 Enough with the problems, lets talk about the solution!
