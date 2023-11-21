@@ -27,5 +27,30 @@ the container will restart.
 
 ## OpenTelemetry Source
 
-Now that data is streaming from telegraf to cribl, we need to set up a source to accept the data. Open your Cribl UI, navigate to “collect” and then select “add source” on the top.
-Scroll all the way to the bottom and select “more sources”. You’ll finally see OpenTelemetry. Go ahead and add it.
+Now that data is streaming from telegraf to cribl, we need to set up a source to accept the data. Open your Cribl UI, navigate to “collect” and then select “add source” on the top. Scroll all the way to the bottom and select “more sources”. You’ll finally see OpenTelemetry. Go ahead and add it.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/812986d1-05b1-434d-ba38-15a149b1c2a3" width="40%" height=40%">
+</p>
+
+Once you add it, move your mouse over it and you’ll get the option to configure the source. Under General Settings, you just need to set the IP to listen 
+on 0.0.0.0 and set the port to whatever port your container has open to ingest data. The default is 4317. The protocol is gRPC and should already be set.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/e0b16ce9-6ef2-470f-8582-d5d5d837cfd0" width="40%" height="40%">
+</p>
+
+Next, you can select “Authentication” and set it to “none”. Since we are not using a production environment and have not set up any type of TLS settings,
+we need to make sure we also set the server side settings to disable.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/4d60cd75-a46a-44e4-969c-f46c4007b25b" width="40%" height="40%">
+</p>
+
+Thats it. Thats all it takes to set up the OpenTelemetry data source. If you want to verify events are coming in, you can select the status, charts, or live data
+tabs. You should see data coming in. If you check the ”Live Data” tab, you’ll notice it has a default filter expression to display only the OpenTelemetry data.
+It’s worth while to copy this expression since we can use it later to filter “__inputID=='open_telemetry:1”
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/67222c09-9144-4c36-98aa-c496372b09b7" width="40%" height="40%">
+</p>
