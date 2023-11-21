@@ -272,6 +272,9 @@ and you can cut up and manipulate your data however you want. Feel free to skip 
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/03217b7e-131e-488b-831d-9824e8dda312">
 </p>
 
+Go ahead click save and take a look at your data. It's beautiful.
+
+
 ## Baseline Eval Function
 
 Now we have our data broken apart into individual events (woohoo!), lets start extracting the fields from our _raw schema that are consistant across all our different telemetry 
@@ -332,7 +335,7 @@ our data, we want the name to easily describe the value. By adding this field, w
 connection_total_dropped.
 
 <p align="center">
-<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/2d9bb41f-4704-400d-b56e-a07e90419b0f" width="60%" height="60%">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/1bea7a9b-be96-42c0-aae0-89651fe1503f" width="60%" height="60%">
 </p>
 
 
