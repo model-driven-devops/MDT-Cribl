@@ -390,8 +390,25 @@ Placeholder. Need to figure out if Elasticsearch needs to be prepped.
 
 ## Adding Parsers
 
-Alright, we're almost done. Now it's time to add our parsers to drop the rest of the data points into telemetry specefic catagories.
+Alright, we're almost done. Now it's time to add our parsers to drop the rest of the data points into telemetry specefic catagories. Add a new parser function. In the filter field, we are going to target any event that has a similar path. This example with use BGP.
+
+```
+path.includes("Cisco-IOS-XE-bgp-oper:bgp-state-data")
+```
+
+Then we want to extract all data nested under the attributes field and append "bgp" to it so we can identify it. Our source will be:
+
+```
+data.data_points[0].attributes
+```
+and our destination will simply be "bgp".
 
 <p align="center">
-<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/a4c8cf43-23a7-4450-b56e-211a73fb32af" width="60%" height="60%">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/355c1123-62b3-435b-92ca-dce8d0b7a052" width="60%" height="60%">
+</p>
+
+We can also remove the source and path field since we already have those elevated. Now take a look at our data!
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/a42fa6d1-4d89-4c77-925e-9ad1cec94cb4">
 </p>
