@@ -456,3 +456,23 @@ Press the green arrow to send the command to elasticsearch and you should see th
 <p align="center">
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/84752afc-febd-479f-8ee5-73d2136431d1" width="80%" height="80%">
 </p>
+
+### Connect your pipeline
+
+Head back to cribl and go to the collect window. Highlight the connection between the OpenTelemetry source and whatever destination you have it connected to. Select "Pipeline"
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/5d199f0f-8a6c-4ee2-85c4-e00f284c44a4" width="70%" height="70%">
+</p>
+
+Find the name of your pipeline and select it. Click save. You are now sending all data coming from the OpenTelemetry source (telegraf) through your pipeline, where it transforms the data. Once saved, grab the line connecting your source and destination and drag it over to ElasticSearch.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c70f8a6f-1248-4e0d-9aeb-bf2f94374c9b" width="70%" height="70%">
+</p>
+
+Now you can select your elasticsearch destination and verify the data is being sent correctly. There are mutliple tabs that help. You can capture events like we did when creating the pipeline, look at logs, etc. The screen shot below shows the Live Data tab.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/9e416462-d31e-4e11-b27b-28d669ac5d1e" width="70%" height="70%">
+</p>
