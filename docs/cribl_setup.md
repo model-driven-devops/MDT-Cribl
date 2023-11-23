@@ -13,7 +13,7 @@
   * [Adding GeoPoint](#adding-geopoint)
   * [Adding Parsers](#adding-parsers)
   * [Clean Up](#clean-up)
-* [Sending to ElasticSearch]
+* [Sending to ElasticSearch](#sending-to-elasticsearch)
 
 # Cribl Setup
 
@@ -433,4 +433,26 @@ Now doesn't that look better!
 
 <p align="center">
 <img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/a3758e61-27a4-4a38-86d5-4bf40f4fd736" width="60%" height="60%">
+</p>
+
+## Sending to Elasticsearch
+
+Now we should be ready to start sending data to elasticsearch for some visualization. Before we do that, remember those functions we created for the location? We need to prepare our elasticsearch index to accept those coordinates in the correct format. Go ahead and login to Kibana and head to the "Dev Tools" section. In the console, we are going to set the "location" field as a geopoint. You can use the code below, but make sure you replace "telemetry" with whatever the name of your index is.
+
+```
+PUT telemetry
+{
+  "mappings": {
+    "properties": {
+      "location": {
+        "type": "geo_point"
+      }
+    }
+  }
+}
+```
+Press the green arrow to send the command to elasticsearch and you should see the accepted output.
+
+<p align="center">
+<img src="https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/84752afc-febd-479f-8ee5-73d2136431d1" width="80%" height="80%">
 </p>
