@@ -13,3 +13,17 @@ There are two topology files located in the files directory of this repository -
 ## Set Up Telemetry Node
 
 The first thing we need to do is install docker compose onto the telemetry node. You can find the instructions for ubuntu here - https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository. Once you have that installed, you can copy this repository to the node.
+
+```
+git clone https://github.com/model-driven-devops/MDT-Cribl.git
+```
+
+Navigate to the telemetry directory - MDT-Cribl/telemetry/
+
+You can take a look at the docker-compose.yml file if you want to make any changes, but the compose file deployes four containers:
+- Elasticsearch: This will be the timeseries database that stores your telemetry.
+- Kibana: This will be the visualization tool.
+- Cribl: This will be used to transform the data as it comes through telegraf.
+- Telegraf: This will be used to decode the MDT and convert it to OpenTelemetry.
+
+- 
