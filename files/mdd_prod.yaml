@@ -1,0 +1,3069 @@
+lab:
+  description: ''
+  notes: ''
+  title: mdd_prod
+  version: 0.1.0
+links:
+  - id: l0
+    n1: n22
+    n2: n23
+    i1: i0
+    i2: i1
+    label: ISP-mgmt-bridge-port<->ISP-GigabitEthernet1
+  - id: l1
+    n1: n13
+    n2: n14
+    i1: i0
+    i2: i0
+    label: hq-mgmt-bridge-port<->hq-mgmt-switch-port0
+  - id: l2
+    n1: n0
+    n2: n9
+    i1: i1
+    i2: i0
+    label: WAN-rtr1-GigabitEthernet1<->WAN-mgmt-port
+  - id: l3
+    n1: n15
+    n2: n16
+    i1: i0
+    i2: i0
+    label: site1-mgmt-switch-port0<->site1-mgmt-bridge-port
+  - id: l4
+    n1: n17
+    n2: n18
+    i1: i0
+    i2: i0
+    label: site2-mgmt-switch-port0<->site2-mgmt-bridge-port
+  - id: l5
+    n1: n14
+    n2: n21
+    i1: i1
+    i2: i1
+    label: hq-mgmt-switch-port1<->hq-pop-GigabitEthernet1
+  - id: l6
+    n1: n4
+    n2: n14
+    i1: i1
+    i2: i2
+    label: hq-rtr1-GigabitEthernet1<->hq-mgmt-switch-port2
+  - id: l7
+    n1: n5
+    n2: n14
+    i1: i1
+    i2: i3
+    label: hq-rtr2-GigabitEthernet1<->hq-mgmt-switch-port3
+  - id: l8
+    n1: n1
+    n2: n14
+    i1: i1
+    i2: i4
+    label: hq-sw1-GigabitEthernet0/0<->hq-mgmt-switch-port4
+  - id: l9
+    n1: n2
+    n2: n14
+    i1: i1
+    i2: i5
+    label: hq-sw2-GigabitEthernet0/0<->hq-mgmt-switch-port5
+  - id: l10
+    n1: n6
+    n2: n15
+    i1: i1
+    i2: i1
+    label: site1-rtr1-GigabitEthernet1<->site1-mgmt-switch-port1
+  - id: l11
+    n1: n3
+    n2: n15
+    i1: i1
+    i2: i2
+    label: site1-sw1-GigabitEthernet0/0<->site1-mgmt-switch-port2
+  - id: l12
+    n1: n10
+    n2: n17
+    i1: i1
+    i2: i1
+    label: site2-rtr1-GigabitEthernet1<->site2-mgmt-switch-port1
+  - id: l13
+    n1: n11
+    n2: n17
+    i1: i1
+    i2: i2
+    label: site2-sw1-GigabitEthernet0/0<->site2-mgmt-switch-port2
+  - id: l14
+    n1: n14
+    n2: n19
+    i1: i6
+    i2: i0
+    label: hq-mgmt-switch-port6<->nso1-ens2
+  - id: l15
+    n1: n0
+    n2: n4
+    i1: i2
+    i2: i2
+    label: WAN-rtr1-GigabitEthernet2<->hq-rtr1-GigabitEthernet2
+  - id: l16
+    n1: n0
+    n2: n5
+    i1: i3
+    i2: i2
+    label: WAN-rtr1-GigabitEthernet3<->hq-rtr2-GigabitEthernet2
+  - id: l17
+    n1: n0
+    n2: n6
+    i1: i4
+    i2: i2
+    label: WAN-rtr1-GigabitEthernet4<->site1-rtr1-GigabitEthernet2
+  - id: l18
+    n1: n0
+    n2: n10
+    i1: i5
+    i2: i2
+    label: WAN-rtr1-GigabitEthernet5<->site2-rtr1-GigabitEthernet2
+  - id: l19
+    n1: n20
+    n2: n23
+    i1: i0
+    i2: i8
+    label: internet-out-port<->ISP-GigabitEthernet8
+  - id: l20
+    n1: n21
+    n2: n23
+    i1: i8
+    i2: i2
+    label: hq-pop-GigabitEthernet8<->ISP-GigabitEthernet2
+  - id: l21
+    n1: n1
+    n2: n21
+    i1: i6
+    i2: i2
+    label: hq-sw1-GigabitEthernet1/1<->hq-pop-GigabitEthernet2
+  - id: l22
+    n1: n1
+    n2: n4
+    i1: i2
+    i2: i3
+    label: hq-sw1-GigabitEthernet0/1<->hq-rtr1-GigabitEthernet3
+  - id: l23
+    n1: n2
+    n2: n5
+    i1: i2
+    i2: i3
+    label: hq-sw2-GigabitEthernet0/1<->hq-rtr2-GigabitEthernet3
+  - id: l24
+    n1: n1
+    n2: n2
+    i1: i3
+    i2: i3
+    label: hq-sw1-GigabitEthernet0/2<->hq-sw2-GigabitEthernet0/2
+  - id: l25
+    n1: n4
+    n2: n5
+    i1: i4
+    i2: i4
+    label: hq-rtr1-GigabitEthernet4<->hq-rtr2-GigabitEthernet4
+  - id: l26
+    n1: n1
+    n2: n8
+    i1: i5
+    i2: i0
+    label: hq-sw1-GigabitEthernet1/0<->hq-host1-ens2
+  - id: l27
+    n1: n2
+    n2: n19
+    i1: i4
+    i2: i1
+    label: hq-sw2-GigabitEthernet0/3<->nso1-ens3
+  - id: l28
+    n1: n3
+    n2: n6
+    i1: i2
+    i2: i3
+    label: site1-sw1-GigabitEthernet0/1<->site1-rtr1-GigabitEthernet3
+  - id: l29
+    n1: n3
+    n2: n7
+    i1: i3
+    i2: i0
+    label: site1-sw1-GigabitEthernet0/2<->site1-host1-ens2
+  - id: l30
+    n1: n10
+    n2: n11
+    i1: i3
+    i2: i2
+    label: site2-rtr1-GigabitEthernet3<->site2-sw1-GigabitEthernet0/1
+  - id: l31
+    n1: n11
+    n2: n12
+    i1: i3
+    i2: i0
+    label: site2-sw1-GigabitEthernet0/2<->site2-host1-ens2
+  - id: l32
+    n1: n24
+    n2: n14
+    i1: i0
+    i2: i7
+    label: telemetry-ens2<->hq-mgmt-switch-port7
+nodes:
+  - boot_disk_size: 0
+    configuration: |-
+      hostname WAN-rtr1
+      vrf definition Mgmt-intf
+      !
+      address-family ipv4
+      exit-address-family
+      !
+      address-family ipv6
+      exit-address-family
+      !
+      username admin privilege 15 secret 0 admin
+      cdp run
+      no aaa new-model
+      ip domain-name mdd.cisco.com
+      !
+      interface Loopback0
+      ip address 10.255.255.1 255.255.255.255
+      !
+      interface GigabitEthernet1
+      vrf forwarding Mgmt-intf
+      ip address dhcp
+      negotiation auto
+      no cdp enable
+      no shutdown
+      !
+      interface GigabitEthernet2
+      ip address 10.0.0.1 255.255.255.252
+      negotiation auto
+      mpls ip
+      no mop enabled
+      no mop sysid
+      no shutdown
+      !
+      interface GigabitEthernet3
+      ip address 10.0.0.5 255.255.255.252
+      negotiation auto
+      mpls ip
+      no mop enabled
+      no mop sysid
+      cdp enable
+      no shutdown
+      !
+      interface GigabitEthernet4
+      ip address 10.0.0.9 255.255.255.252
+      negotiation auto
+      mpls ip
+      no mop enabled
+      no mop sysid
+      no shutdown
+      !
+      interface GigabitEthernet5
+      ip address 10.0.0.13 255.255.255.252
+      negotiation auto
+      mpls ip
+      no mop enabled
+      no mop sysid
+      cdp enable
+      no shutdown
+      !
+      router ospf 100
+      router-id 10.255.255.1
+      passive-interface Loopback0
+      network 10.0.0.1 0.0.0.0 area 0
+      network 10.0.0.5 0.0.0.0 area 0
+      network 10.0.0.9 0.0.0.0 area 0
+      network 10.0.0.13 0.0.0.0 area 0
+      network 10.255.255.1 0.0.0.0 area 0
+      !
+      router bgp 65100
+      bgp router-id 10.255.255.1
+      bgp log-neighbor-changes
+      bgp listen range 10.255.255.0/24 peer-group L3VPN_PEERS
+      no bgp default ipv4-unicast
+      neighbor L3VPN_PEERS peer-group
+      neighbor L3VPN_PEERS remote-as 65100
+      neighbor L3VPN_PEERS cluster-id 10.255.255.1
+      neighbor L3VPN_PEERS update-source Loopback0
+      !
+      address-family vpnv4
+      neighbor L3VPN_PEERS activate
+      neighbor L3VPN_PEERS send-community extended
+      neighbor L3VPN_PEERS route-reflector-client
+      exit-address-family
+      !
+      ip forward-protocol nd
+      ip http server
+      ip http secure-server
+      ip http max-connections 2
+      !
+      ip ssh time-out 60
+      ip ssh version 2
+      ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      !
+      mpls ldp router-id Loopback0 force
+      !
+      banner login ^CUnauthorized access is prohibited!^C
+      banner motd ^CWelcome to hq-rtr1^C
+      !
+      line vty 0 4
+      exec-timeout 30 0
+      absolute-timeout 60
+      session-limit 16
+      login local
+      transport input ssh
+      !
+      ntp server 216.239.35.0
+      ntp server 216.239.35.4
+      !
+      end
+    cpu_limit: 100
+    cpus: 1
+    data_volume: 0
+    hide_links: false
+    id: n0
+    image_definition: ''
+    label: WAN-rtr1
+    node_definition: csr1000v
+    ram: 3072
+    tags: []
+    x: -500
+    y: -150
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+  - boot_disk_size: 0
+    configuration: |-
+      hostname hq-sw1
+      vrf definition Mgmt-intf
+      !
+      address-family ipv4
+      exit-address-family
+      !
+      address-family ipv6
+      exit-address-family
+      !
+      username admin privilege 15 secret 0 admin
+      cdp run
+      no aaa new-model
+      ip domain-name mdd.cisco.com
+      ip name-server 208.67.222.222
+      ip name-server 208.67.220.220
+      !
+      spanning-tree mode rapid-pvst
+      spanning-tree loopguard default
+      spanning-tree portfast edge default
+      spanning-tree portfast edge bpduguard default
+      spanning-tree extend system-id
+      spanning-tree vlan 10,100-101 priority 16384
+      !
+      interface Loopback0
+      ip address 172.16.255.3 255.255.255.255
+      !
+      interface GigabitEthernet0/0
+      no switchport
+      vrf forwarding Mgmt-intf
+      ip address dhcp
+      negotiation auto
+      no cdp enable
+      no shutdown
+      !
+      interface GigabitEthernet0/1
+      switchport trunk encapsulation dot1q
+      switchport mode trunk
+      negotiation auto
+      spanning-tree portfast edge trunk
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      no shutdown
+      !
+      interface GigabitEthernet0/2
+      switchport trunk encapsulation dot1q
+      switchport mode trunk
+      negotiation auto
+      spanning-tree portfast disable
+      spanning-tree link-type point-to-point
+      no shutdown
+      !
+      interface GigabitEthernet0/3
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet1/0
+      switchport access vlan 10
+      switchport mode access
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      no shutdown
+      !
+      interface GigabitEthernet1/1
+      switchport trunk encapsulation dot1q
+      switchport mode trunk
+      negotiation auto
+      spanning-tree portfast edge trunk
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet1/2
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet1/3
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet2/0
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet2/1
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet2/2
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet2/3
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet3/0
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet3/1
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet3/2
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet3/3
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface Vlan10
+      description VLAN10
+      ip address 172.16.0.11 255.255.255.0
+      !
+      ip forward-protocol nd
+      !
+      ip http server
+      ip http secure-server
+      ip http max-connections 2
+      !
+      ip ssh time-out 60
+      ip ssh version 2
+      ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      !
+      line vty 0 4
+      exec-timeout 30 0
+      absolute-timeout 60
+      session-limit 16
+      login local
+      transport input ssh
+      !
+      end
+    cpu_limit: 100
+    cpus: 1
+    data_volume: 0
+    hide_links: false
+    id: n1
+    label: hq-sw1
+    node_definition: iosvl2
+    ram: 768
+    tags: []
+    x: -900
+    y: -250
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet1/0
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet1/1
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet1/2
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet1/3
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet2/0
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet2/1
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet2/2
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet2/3
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet3/0
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet3/1
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet3/2
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet3/3
+        slot: 15
+        type: physical
+  - boot_disk_size: 0
+    configuration: |-
+      hostname hq-sw2
+      vrf definition Mgmt-intf
+      !
+      address-family ipv4
+      exit-address-family
+      !
+      address-family ipv6
+      exit-address-family
+      !
+      username admin privilege 15 secret 0 admin
+      cdp run
+      no aaa new-model
+      ip domain-name mdd.cisco.com
+      ip name-server 208.67.222.222
+      ip name-server 208.67.220.220
+      !
+      spanning-tree mode rapid-pvst
+      spanning-tree loopguard default
+      spanning-tree portfast edge default
+      spanning-tree portfast edge bpduguard default
+      spanning-tree extend system-id
+      !
+      interface Loopback0
+      ip address 172.16.255.4 255.255.255.255
+      !
+      interface GigabitEthernet0/0
+      no switchport
+      vrf forwarding Mgmt-intf
+      ip address dhcp
+      negotiation auto
+      no cdp enable
+      no shutdown
+      !
+      interface GigabitEthernet0/1
+      switchport trunk encapsulation dot1q
+      switchport mode trunk
+      negotiation auto
+      spanning-tree portfast edge trunk
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      no shutdown
+      !
+      interface GigabitEthernet0/2
+      switchport trunk encapsulation dot1q
+      switchport mode trunk
+      negotiation auto
+      spanning-tree portfast disable
+      spanning-tree link-type point-to-point
+      no shutdown
+      !
+      interface GigabitEthernet0/3
+      switchport access vlan 10
+      switchport mode access
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      no shutdown
+      !
+      interface GigabitEthernet1/0
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet1/0
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet1/1
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet1/2
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet1/3
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet2/0
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet2/1
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet2/2
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet2/3
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet3/0
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet3/1
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet3/2
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet3/3
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface Vlan10
+      description VLAN10
+      ip address 172.16.0.12 255.255.255.0
+      !
+      ip http server
+      ip http secure-server
+      ip http max-connections 2
+      !
+      ip ssh time-out 60
+      ip ssh version 2
+      ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      !
+      line vty 0 4
+      exec-timeout 30 0
+      absolute-timeout 60
+      session-limit 16
+      login local
+      transport input ssh
+      !
+      end
+    cpu_limit: 100
+    cpus: 1
+    data_volume: 0
+    hide_links: false
+    id: n2
+    label: hq-sw2
+    node_definition: iosvl2
+    ram: 768
+    tags: []
+    x: -900
+    y: -50
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet1/0
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet1/1
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet1/2
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet1/3
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet2/0
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet2/1
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet2/2
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet2/3
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet3/0
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet3/1
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet3/2
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet3/3
+        slot: 15
+        type: physical
+  - boot_disk_size: 0
+    configuration: |-
+      hostname site1-sw1
+      vrf definition Mgmt-intf
+      !
+      address-family ipv4
+      exit-address-family
+      !
+      address-family ipv6
+      exit-address-family
+      !
+      username admin privilege 15 secret 0 admin
+      cdp run
+      no aaa new-model
+      ip domain-name mdd.cisco.com
+      ip name-server 208.67.222.222
+      ip name-server 208.67.220.220
+      !
+      spanning-tree mode rapid-pvst
+      spanning-tree loopguard default
+      spanning-tree portfast edge default
+      spanning-tree portfast edge bpduguard default
+      spanning-tree extend system-id
+      !
+      interface GigabitEthernet0/0
+      no switchport
+      vrf forwarding Mgmt-intf
+      ip address dhcp
+      negotiation auto
+      no cdp enable
+      no shutdown
+      !
+      interface GigabitEthernet0/1
+      switchport trunk allowed vlan 10
+      switchport trunk encapsulation dot1q
+      switchport mode trunk
+      negotiation auto
+      spanning-tree portfast edge trunk
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      no shutdown
+      !
+      interface GigabitEthernet0/2
+      switchport access vlan 10
+      switchport mode access
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      no shutdown
+      !
+      interface GigabitEthernet0/3
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet1/0
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet1/1
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet1/2
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet1/3
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet2/0
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet2/1
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet2/2
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet2/3
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet3/0
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet3/1
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet3/2
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      interface GigabitEthernet3/3
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      !
+      ip forward-protocol nd
+      !
+      ip http server
+      ip http secure-server
+      ip http max-connections 2
+      !
+      ip ssh time-out 60
+      ip ssh version 2
+      ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      !
+      line vty 0 4
+      exec-timeout 30 0
+      absolute-timeout 60
+      session-limit 16
+      login local
+      transport input ssh
+      !
+      end
+    cpu_limit: 100
+    cpus: 1
+    data_volume: 0
+    hide_links: false
+    id: n3
+    label: site1-sw1
+    node_definition: iosvl2
+    ram: 768
+    tags: []
+    x: -100
+    y: -300
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet1/0
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet1/1
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet1/2
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet1/3
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet2/0
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet2/1
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet2/2
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet2/3
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet3/0
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet3/1
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet3/2
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet3/3
+        slot: 15
+        type: physical
+  - boot_disk_size: 0
+    configuration: |-
+      hostname hq-rtr1
+      vrf definition Mgmt-intf
+      !
+      address-family ipv4
+      exit-address-family
+      !
+      address-family ipv6
+      exit-address-family
+      !
+      vrf definition internal_1
+      rd 1:1
+      route-target export 1:1
+      route-target import 1:1
+      !
+      address-family ipv4
+      import ipv4 unicast map import-route-target
+      export map export-route-target
+      exit-address-family
+      !
+      address-family ipv6
+      exit-address-family
+      !
+      username admin privilege 15 secret 0 admin
+      cdp run
+      no aaa new-model
+      ip domain-name mdd.cisco.com
+      !
+      ip name-server 208.67.222.222 208.67.220.220
+      !
+      !
+      interface Loopback0
+      vrf forwarding internal_1
+      ip address 172.16.255.1 255.255.255.255
+      !
+      interface Loopback100
+      ip address 10.255.255.11 255.255.255.255
+      !
+      interface GigabitEthernet1
+      vrf forwarding Mgmt-intf
+      ip address dhcp
+      negotiation auto
+      no cdp enable
+      no shutdown
+      !
+      interface GigabitEthernet2
+      ip address 10.0.0.2 255.255.255.252
+      negotiation auto
+      cdp enable
+      mpls ip
+      no mop enabled
+      no mop sysid
+      no shutdown
+      !
+      interface GigabitEthernet3
+      description 802.1q Trunk
+      no ip address
+      negotiation auto
+      cdp enable
+      no mop enabled
+      no mop sysid
+      no shutdown
+      !
+      interface GigabitEthernet3.10
+      description VLAN10
+      encapsulation dot1Q 10
+      vrf forwarding internal_1
+      ip address 172.16.0.2 255.255.255.0
+      vrrp 1 ip 172.16.0.1
+      no shutdown
+      !
+      interface GigabitEthernet4
+      ip address 10.0.3.1 255.255.255.252
+      negotiation auto
+      cdp enable
+      mpls ip
+      no mop enabled
+      no mop sysid
+      no shutdown
+      !
+      router ospf 1 vrf internal_1
+      capability vrf-lite
+      redistribute bgp 65100 route-map to_ospf
+      passive-interface Loopback0
+      network 172.16.0.2 0.0.0.0 area 0
+      network 172.16.255.1 0.0.0.0 area 0
+      !
+      router ospf 100
+      passive-interface Loopback100
+      network 10.0.0.2 0.0.0.0 area 0
+      network 10.0.3.1 0.0.0.0 area 0
+      network 10.255.255.11 0.0.0.0 area 0
+      !
+      router bgp 65100
+      bgp router-id 10.255.255.11
+      bgp log-neighbor-changes
+      no bgp default ipv4-unicast
+      neighbor 10.255.255.1 remote-as 65100
+      neighbor 10.255.255.1 description WAN RR
+      neighbor 10.255.255.1 update-source Loopback100
+      !
+      address-family ipv4
+      maximum-paths ibgp 2
+      exit-address-family
+      !
+      address-family vpnv4
+      neighbor 10.255.255.1 activate
+      neighbor 10.255.255.1 send-community both
+      neighbor 10.255.255.1 route-map from_wan in
+      exit-address-family
+      !
+      address-family ipv4 vrf internal_1
+      redistribute ospf 1 route-map from_ospf
+      default-information originate
+      distance bgp 20 99 200
+      exit-address-family
+      !
+      ip forward-protocol nd
+      no ip http server
+      ip http secure-server
+      ip http max-connections 2
+      !
+      ip http server
+      ip http secure-server
+      ip http max-connections 2
+      !
+      ip extcommunity-list standard import-ext-community-set permit rt 1:1
+      ip extcommunity-list standard export-ext-community-set permit rt 1:1
+      ip bgp-community new-format
+      !
+      ip ssh time-out 60
+      ip ssh version 2
+      ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      !
+      !
+      !
+      ip prefix-list DEFAULT seq 5 permit 0.0.0.0/0
+      !
+      ip prefix-list LOCAL-PREFIXES seq 5 permit 172.16.0.0/24
+      ip prefix-list LOCAL-PREFIXES seq 10 permit 172.16.255.1/32
+      ip prefix-list LOCAL-PREFIXES seq 15 permit 172.16.255.2/32
+      !
+      !
+      route-map from_wan deny 10
+      match ip address prefix-list DEFAULT
+      !
+      route-map from_wan deny 20
+      match ip address prefix-list LOCAL-PREFIXES
+      !
+      route-map from_wan permit 30
+      !
+      route-map from_ospf deny 10
+      match tag 9999
+      !
+      route-map from_ospf permit 20
+      !
+      route-map to_ospf permit 10
+      set tag 9999
+      !
+      route-map export-route-target permit 10
+      match extcommunity export-ext-community-set
+      !
+      route-map import-route-target permit 10
+      match extcommunity import-ext-community-set
+      !
+      mpls ldp router-id Loopback100 force
+      !
+      !
+      banner login ^CUnauthorized access is prohibited!^C
+      banner motd ^CWelcome to hq-rtr1^C
+      !
+      line vty 0 4
+      exec-timeout 30 0
+      absolute-timeout 60
+      session-limit 16
+      login local
+      transport input ssh
+      !
+      end
+    cpu_limit: 100
+    cpus: 1
+    data_volume: 0
+    hide_links: false
+    id: n4
+    image_definition: ''
+    label: hq-rtr1
+    node_definition: csr1000v
+    ram: 3072
+    tags: []
+    x: -750
+    y: -250
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+  - boot_disk_size: 0
+    configuration: |-
+      hostname hq-rtr2
+      vrf definition Mgmt-intf
+      !
+      address-family ipv4
+      exit-address-family
+      !
+      address-family ipv6
+      exit-address-family
+      !
+      vrf definition internal_1
+      rd 1:1
+      route-target export 1:1
+      route-target import 1:1
+      !
+      address-family ipv4
+      import ipv4 unicast map import-route-target
+      export map export-route-target
+      exit-address-family
+      !
+      ip name-server 208.67.222.222 208.67.220.220
+      ip domain name mdd.cisco.com
+      !
+      username admin privilege 15 secret 0 admin
+      cdp run
+      no aaa new-model
+      ip domain-name mdd.cisco.com
+      !
+      cdp run
+      !
+      interface Loopback0
+      vrf forwarding internal_1
+      ip address 172.16.255.2 255.255.255.255
+      !
+      interface Loopback100
+      ip address 10.255.255.12 255.255.255.255
+      !
+      interface GigabitEthernet1
+      vrf forwarding Mgmt-intf
+      ip address dhcp
+      negotiation auto
+      no mop enabled
+      no mop sysid
+      no shutdown
+      !
+      interface GigabitEthernet2
+      ip address 10.0.0.6 255.255.255.252
+      negotiation auto
+      cdp enable
+      mpls ip
+      no mop enabled
+      no mop sysid
+      no shutdown
+      !
+      interface GigabitEthernet3
+      description 802.1q Trunk
+      no ip address
+      negotiation auto
+      cdp enable
+      no mop enabled
+      no mop sysid
+      no shutdown
+      !
+      interface GigabitEthernet3.10
+      description VLAN10
+      encapsulation dot1Q 10
+      vrf forwarding internal_1
+      ip address 172.16.0.3 255.255.255.0
+      vrrp 1 ip 172.16.0.1
+      vrrp 1 preempt delay minimum 10
+      vrrp 1 priority 200
+      no shutdown
+      !
+      interface GigabitEthernet4
+      ip address 10.0.3.2 255.255.255.252
+      negotiation auto
+      cdp enable
+      mpls ip
+      no mop enabled
+      no mop sysid
+      no shutdown
+      !
+      router ospf 1 vrf internal_1
+      capability vrf-lite
+      redistribute bgp 65100 route-map to_ospf
+      passive-interface Loopback0
+      network 172.16.0.3 0.0.0.0 area 0
+      network 172.16.255.2 0.0.0.0 area 0
+      !
+      router ospf 100
+      passive-interface Loopback100
+      network 10.0.0.6 0.0.0.0 area 0
+      network 10.0.3.2 0.0.0.0 area 0
+      network 10.255.255.12 0.0.0.0 area 0
+      !
+      router bgp 65100
+      bgp router-id 10.255.255.12
+      bgp log-neighbor-changes
+      no bgp default ipv4-unicast
+      neighbor 10.255.255.1 remote-as 65100
+      neighbor 10.255.255.1 description WAN RR
+      neighbor 10.255.255.1 update-source Loopback100
+      !
+      address-family ipv4
+      maximum-paths ibgp 2
+      exit-address-family
+      !
+      address-family vpnv4
+      neighbor 10.255.255.1 activate
+      neighbor 10.255.255.1 send-community both
+      neighbor 10.255.255.1 route-map from_wan in
+      exit-address-family
+      !
+      address-family ipv4 vrf internal_1
+      redistribute ospf 1 route-map from_ospf
+      default-information originate
+      distance bgp 20 99 200
+      exit-address-family
+      !
+      ip forward-protocol nd
+      ip http server
+      ip http secure-server
+      ip http max-connections 2
+      !
+      ip extcommunity-list standard import-ext-community-set permit rt 1:1
+      ip extcommunity-list standard export-ext-community-set permit rt 1:1
+      ip bgp-community new-format
+      ip ssh time-out 60
+      ip ssh version 2
+      ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      !
+      ip prefix-list DEFAULT seq 5 permit 0.0.0.0/0
+      !
+      ip prefix-list LOCAL-PREFIXES seq 5 permit 172.16.0.0/24
+      ip prefix-list LOCAL-PREFIXES seq 10 permit 172.16.255.1/32
+      ip prefix-list LOCAL-PREFIXES seq 15 permit 172.16.255.2/32
+      !
+      !
+      route-map from_wan deny 10
+      match ip address prefix-list DEFAULT
+      !
+      route-map from_wan deny 20
+      match ip address prefix-list LOCAL-PREFIXES
+      !
+      route-map from_wan permit 30
+      !
+      route-map from_ospf deny 10
+      match tag 9999
+      !
+      route-map from_ospf permit 20
+      !
+      route-map to_ospf permit 10
+      set tag 9999
+      !
+      route-map export-route-target permit 10
+      match extcommunity export-ext-community-set
+      !
+      route-map import-route-target permit 10
+      match extcommunity import-ext-community-set
+      !
+      mpls ldp router-id Loopback100 force
+      !
+      banner login ^CUnauthorized access is prohibited!^C
+      banner motd ^CWelcome to hq-rtr2^C
+      !
+      line vty 0 4
+      exec-timeout 30 0
+      absolute-timeout 60
+      session-limit 16
+      login local
+      transport input ssh
+      !
+      end
+    cpu_limit: 100
+    cpus: 1
+    data_volume: 0
+    hide_links: false
+    id: n5
+    image_definition: ''
+    label: hq-rtr2
+    node_definition: csr1000v
+    ram: 3072
+    tags: []
+    x: -750
+    y: -50
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+  - boot_disk_size: 0
+    configuration: |-
+      hostname site1-rtr1
+      vrf definition Mgmt-intf
+      !
+      address-family ipv4
+      exit-address-family
+      !
+      address-family ipv6
+      exit-address-family
+      !
+      vrf definition internal_1
+      rd 1:1
+      route-target export 1:1
+      route-target import 1:1
+      !
+      address-family ipv4
+      import ipv4 unicast map import-route-target
+      export map export-route-target
+      exit-address-family
+      !
+      username admin privilege 15 secret 0 admin
+      cdp run
+      no aaa new-model
+      ip name-server 208.67.222.222 208.67.220.220
+      ip domain-name mdd.cisco.com
+      !
+      spanning-tree extend system-id
+      !
+      interface Loopback0
+      vrf forwarding internal_1
+      ip address 192.168.255.1 255.255.255.255
+      !
+      interface Loopback100
+      ip address 10.255.255.13 255.255.255.255
+      !
+      interface GigabitEthernet1
+      vrf forwarding Mgmt-intf
+      ip address dhcp
+      negotiation auto
+      no cdp enable
+      no shutdown
+      !
+      interface GigabitEthernet2
+      ip address 10.0.0.10 255.255.255.252
+      negotiation auto
+      cdp enable
+      mpls ip
+      no mop enabled
+      no mop sysid
+      no shutdown
+      !
+      interface GigabitEthernet3
+      description 802.1q Trunk
+      no ip address
+      negotiation auto
+      cdp enable
+      no mop enabled
+      no mop sysid
+      no shutdown
+      !
+      interface GigabitEthernet3.10
+      description VLAN10
+      encapsulation dot1Q 10
+      vrf forwarding internal_1
+      ip address 192.168.1.1 255.255.255.0
+      no shutdown
+      !
+      router ospf 100
+      passive-interface Loopback100
+      network 10.0.0.10 0.0.0.0 area 0
+      network 10.255.255.13 0.0.0.0 area 0
+      !
+      router bgp 65100
+      bgp router-id 10.255.255.13
+      bgp log-neighbor-changes
+      bgp bestpath as-path multipath-relax
+      no bgp default ipv4-unicast
+      neighbor 10.255.255.1 remote-as 65100
+      neighbor 10.255.255.1 description WAN RR
+      neighbor 10.255.255.1 update-source Loopback100
+      !
+      address-family ipv4
+      maximum-paths 2
+      maximum-paths ibgp 2
+      exit-address-family
+      !
+      address-family vpnv4
+      neighbor 10.255.255.1 activate
+      neighbor 10.255.255.1 send-community both
+      exit-address-family
+      !
+      address-family ipv4 vrf internal_1
+      redistribute connected
+      redistribute static
+      exit-address-family
+      !
+      ip forward-protocol nd
+      ip http server
+      ip http secure-server
+      ip http max-connections 2
+      !
+      ip extcommunity-list standard import-ext-community-set permit rt 1:1
+      ip extcommunity-list standard export-ext-community-set permit rt 1:1
+      ip bgp-community new-format
+      ip ssh time-out 60
+      ip ssh version 2
+      ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      !
+      route-map export-route-target permit 10
+      match extcommunity export-ext-community-set
+      !
+      route-map import-route-target permit 10
+      match extcommunity import-ext-community-set
+      !
+      mpls ldp router-id Loopback100 force
+      !
+      banner login ^CUnauthorized access is prohibited!^C
+      banner motd ^CWelcome to site1-rtr1^C
+      !
+      line vty 0 4
+      exec-timeout 30 0
+      absolute-timeout 60
+      session-limit 16
+      login local
+      transport input ssh
+      !
+      ntp server 216.239.35.0
+      ntp server 216.239.35.4
+      !
+      end
+    cpu_limit: 100
+    cpus: 1
+    data_volume: 0
+    hide_links: false
+    id: n6
+    image_definition: ''
+    label: site1-rtr1
+    node_definition: csr1000v
+    ram: 3072
+    tags: []
+    x: -250
+    y: -300
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+  - boot_disk_size: 64
+    configuration: |-
+      #cloud-config
+      hostname: site1-host1
+      manage_etc_hosts: True
+      system_info:
+        default_user:
+          name: ubuntu
+      password: admin
+      chpasswd: { expire: False }
+      write_files:
+        - path:  /etc/cloud/cloud.cfg.d/99-no_networking.cfg
+          append: false
+          content: |
+            network: {config: disabled}
+            disable_network_activation: true
+        - path:  /opt/cisco/scripts/interfaces.sh
+          owner: root:root
+          permissions: '0755'
+          content: |
+            #!/usr/bin/env bash
+            NETPLAN_FILE=/etc/netplan/60-cloud-init.yaml
+            LINK_COUNT=`ip -o link | wc -l`
+            # The 1st interface should be lo, so start with the 2nd
+            for ((i=2; i<=${LINK_COUNT}; i++)); do
+              INT_INFO=$(ip -o link | sed -n "${i}p")
+              MAC_ADDR=$(echo "$INT_INFO" | sed -E 's/.*ether ([[:xdigit:]:]+).*/\1/')
+              INT_NAME=$(echo "$INT_INFO" | sed -E 's/[[:digit:]]+: ([[:alnum:]]+): .*/\1/')
+              sed -i -E "s/%MAC_ADDR_$(( $i - 1 ))%/${MAC_ADDR}/g" "$NETPLAN_FILE"
+              sed -i -E "s/%INT_NAME_$(( $i - 1 ))%/${INT_NAME}/g" "$NETPLAN_FILE"
+              ip link set up dev ${INT_NAME} || true
+            done
+        - path:  /etc/netplan/60-cloud-init.yaml
+          owner: root:root
+          permissions: '0644'
+          content: |
+            network:
+              version: 2
+              ethernets:
+                %INT_NAME_1%:
+                  match:
+                    macaddress: '%MAC_ADDR_1%'
+                  set-name: %INT_NAME_1%
+                  addresses: [192.168.1.100/24]
+                  routes:
+                  - to: default
+                    via: 192.168.1.1
+                  nameservers:
+                    addresses:
+                    - 8.8.8.8
+        - path:  /opt/cisco/scripts/pinger.sh
+          owner: root:root
+          permissions: '0755'
+          content: |
+            #!/usr/bin/env bash
+            # Set the duration in seconds (e.g., 3 hours)
+            duration=$((5 * 3600))  # 5 hours in seconds
+            end_time=$((SECONDS + duration))
+            while [ $SECONDS -lt $end_time ]; do
+              curl -s -o /dev/null --max-time 10 -i 20 https://www.rumble.com &
+              curl -s -o /dev/null --max-time 10 -i 15 https://www.yandex.ru &
+              curl -s -o /dev/null --max-time 10 -i 10 https://www.poste.it &
+              curl -s -o /dev/null --max-time 10 -i 15 https://www.infomaniak.net &
+              curl -s -o /dev/null --max-time 10 -i 15 https://www.apple.com &
+              curl -s -o /dev/null --max-time 10 -i 20 https://www.ubs.com &
+              curl -s -o /dev/null --max-time 10 -i 12 https://www.sky.it &
+              curl -s -o /dev/null --max-time 10 -i 20 https://www.samsung.com &
+              curl -s -o /dev/null --max-time 10 -i 15 https://www.naver.com &
+              curl -s -o /dev/null --max-time 10 -i 12 https://www.egynews.net &
+              curl -s -o /dev/null --max-time 10 -i 20 https://www.news18.com &
+              curl -s -o /dev/null --max-time 10 -i 20 https://www.namu.wiki &
+              curl -s -o /dev/null --max-time 10 -i 20 https://www.velog.io &
+              curl -s -o /dev/null --max-time 10 -i 20 https://www.canada.ca &
+              wait
+            done
+        - path:  /etc/systemd/system/pinger.service
+          owner: root:root
+          permissions: '0644'
+          content: |
+            [Unit]
+            Description=Test service for pinging
+            [Service]
+            ExecStart=/bin/bash /opt/cisco/scripts/pinger.sh
+            [Install]
+            WantedBy=multi-user.target
+      runcmd:
+        - [/opt/cisco/scripts/interfaces.sh]
+        - [netplan, generate]
+        - [netplan, apply]
+        - [systemctl, daemon-reload]
+        - [systemctl, enable, pinger.service]
+        - [systemctl, start, --no-block, pinger.service]
+    cpu_limit: 100
+    cpus: 1
+    data_volume: 0
+    hide_links: false
+    id: n7
+    label: site1-host1
+    node_definition: ubuntu
+    ram: 2048
+    tags: []
+    x: 75
+    y: -306
+    interfaces:
+      - id: i0
+        label: ens2
+        slot: 0
+        type: physical
+  - boot_disk_size: 64
+    configuration: |-
+      #cloud-config
+      hostname: hq-host1
+      manage_etc_hosts: True
+      system_info:
+        default_user:
+          name: ubuntu
+      password: admin
+      chpasswd: { expire: False }
+      write_files:
+        - path: /etc/cloud/cloud.cfg.d/99-no_networking.cfg
+          append: false
+          content: |
+            network: {config: disabled}
+            disable_network_activation: true
+        - path:  /opt/cisco/scripts/interfaces.sh
+          owner: root:root
+          permissions: '0755'
+          content: |
+            #!/usr/bin/env bash
+            NETPLAN_FILE=/etc/netplan/60-cloud-init.yaml
+            LINK_COUNT=`ip -o link | wc -l`
+            # The 1st interface should be lo, so start with the 2nd
+            for ((i=2; i<=${LINK_COUNT}; i++)); do
+              INT_INFO=$(ip -o link | sed -n "${i}p")
+              MAC_ADDR=$(echo "$INT_INFO" | sed -E 's/.*ether ([[:xdigit:]:]+).*/\1/')
+              INT_NAME=$(echo "$INT_INFO" | sed -E 's/[[:digit:]]+: ([[:alnum:]]+): .*/\1/')
+              sed -i -E "s/%MAC_ADDR_$(( $i - 1 ))%/${MAC_ADDR}/g" "$NETPLAN_FILE"
+              sed -i -E "s/%INT_NAME_$(( $i - 1 ))%/${INT_NAME}/g" "$NETPLAN_FILE"
+              ip link set up dev ${INT_NAME} || true
+            done
+        - path:  /etc/netplan/60-cloud-init.yaml
+          owner: root:root
+          permissions: '0644'
+          content: |
+            network:
+              version: 2
+              ethernets:
+                %INT_NAME_1%:
+                  match:
+                    macaddress: '%MAC_ADDR_1%'
+                  set-name: %INT_NAME_1%
+                  addresses: [172.16.0.100/24]
+                  routes:
+                  - to: default
+                    via: 172.16.0.1
+                  nameservers:
+                    addresses:
+                    - 8.8.8.8
+        - path:  /opt/cisco/scripts/pinger.sh
+          owner: root:root
+          permissions: '0755'
+          content: |
+            #!/usr/bin/env bash
+            # Set the duration in seconds (e.g., 3 hours)
+            duration=$((5 * 3600))  # 5 hours in seconds
+            end_time=$((SECONDS + duration))
+            while [ $SECONDS -lt $end_time ]; do
+              curl -s -o /dev/null --max-time 10 -i 20 https://www.swiftng.com &
+              curl -s -o /dev/null --max-time 10 -i 15 https://www.trello.com &
+              curl -s -o /dev/null --max-time 10 -i 10 https://www.adb.org &
+              curl -s -o /dev/null --max-time 10 -i 15 https://www.sudani.sd &
+              curl -s -o /dev/null --max-time 10 -i 15 https://www.ptt.cc &
+              curl -s -o /dev/null --max-time 10 -i 20 https://www.baidu.com &
+              curl -s -o /dev/null --max-time 10 -i 12 https://livedoor.jp &
+              curl -s -o /dev/null --max-time 10 -i 20 https://www.worlddata.info &
+              curl -s -o /dev/null --max-time 10 -i 15 https://www.supersport.com &
+              curl -s -o /dev/null --max-time 10 -i 12 https://www.egynews.net &
+              curl -s -o /dev/null --max-time 10 -i 20 https://sep.gob.mx &
+              curl -s -o /dev/null --max-time 10 -i 20 https://www.namu.wiki &
+              curl -s -o /dev/null --max-time 10 -i 20 https://www.velog.io &
+              curl -s -o /dev/null --max-time 10 -i 20 https://www.cultura.ro &
+              wait
+            done
+        - path:  /etc/systemd/system/pinger.service
+          owner: root:root
+          permissions: '0644'
+          content: |
+            [Unit]
+            Description=Test service for pinging
+            [Service]
+            ExecStart=/bin/bash /opt/cisco/scripts/pinger.sh
+            [Install]
+            WantedBy=multi-user.target
+      runcmd:
+        - [/opt/cisco/scripts/interfaces.sh]
+        - [netplan, generate]
+        - [netplan, apply]
+        - [systemctl, daemon-reload]
+        - [systemctl, enable, pinger.service]
+        - [systemctl, start, --no-block, pinger.service]
+    cpu_limit: 100
+    cpus: 1
+    data_volume: 0
+    hide_links: false
+    id: n8
+    label: hq-host1
+    node_definition: ubuntu
+    ram: 2048
+    tags: []
+    x: -1065
+    y: -250
+    interfaces:
+      - id: i0
+        label: ens2
+        slot: 0
+        type: physical
+  - boot_disk_size: 0
+    configuration: bridge0
+    cpu_limit: 100
+    cpus: 0
+    data_volume: 0
+    hide_links: false
+    id: n9
+    label: WAN-mgmt
+    node_definition: external_connector
+    ram: 0
+    tags: []
+    x: -500
+    y: -50
+    interfaces:
+      - id: i0
+        label: port
+        slot: 0
+        type: physical
+  - boot_disk_size: 0
+    configuration: |-
+      hostname site2-rtr1
+      vrf definition Mgmt-intf
+      !
+      address-family ipv4
+      exit-address-family
+      !
+      address-family ipv6
+      exit-address-family
+      !
+      vrf definition internal_1
+      rd 1:1
+      route-target export 1:1
+      route-target import 1:1
+      !
+      address-family ipv4
+      import ipv4 unicast map import-route-target
+      export map export-route-target
+      exit-address-family
+      !
+      username admin privilege 15 secret 0 admin
+      cdp run
+      no aaa new-model
+      ip name-server 208.67.222.222 208.67.220.220
+      ip domain-name mdd.cisco.com
+      !
+      interface Loopback0
+      vrf forwarding internal_1
+      ip address 192.168.255.2 255.255.255.255
+      !
+      interface Loopback100
+      ip address 10.255.255.14 255.255.255.255
+      !
+      interface GigabitEthernet1
+      vrf forwarding Mgmt-intf
+      ip address dhcp
+      negotiation auto
+      no mop enabled
+      no mop sysid
+      no cdp enable
+      no shutdown
+      !
+      interface GigabitEthernet2
+      ip address 10.0.0.14 255.255.255.252
+      negotiation auto
+      cdp enable
+      mpls ip
+      no mop enabled
+      no mop sysid
+      no shutdown
+      !
+      interface GigabitEthernet3
+      no ip address
+      negotiation auto
+      cdp enable
+      no mop enabled
+      no mop sysid
+      no shutdown
+      !
+      interface GigabitEthernet3.10
+      description VLAN10
+      encapsulation dot1Q 10
+      vrf forwarding internal_1
+      ip address 192.168.2.1 255.255.255.0
+      no shutdown
+      !
+      router ospf 100
+      passive-interface Loopback100
+      network 10.0.0.14 0.0.0.0 area 0
+      network 10.255.255.14 0.0.0.0 area 0
+      !
+      router bgp 65100
+      bgp router-id 10.255.255.14
+      bgp log-neighbor-changes
+      bgp bestpath as-path multipath-relax
+      no bgp default ipv4-unicast
+      neighbor 10.255.255.1 remote-as 65100
+      neighbor 10.255.255.1 description WAN RR
+      neighbor 10.255.255.1 update-source Loopback100
+      !
+      address-family ipv4
+      maximum-paths 2
+      maximum-paths ibgp 2
+      exit-address-family
+      !
+      address-family vpnv4
+      neighbor 10.255.255.1 activate
+      neighbor 10.255.255.1 send-community both
+      exit-address-family
+      !
+      address-family ipv4 vrf internal_1
+      redistribute connected
+      redistribute static
+      exit-address-family
+      !
+      ip forward-protocol nd
+      ip http server
+      ip http secure-server
+      ip http max-connections 2
+      !
+      ip extcommunity-list standard import-ext-community-set permit rt 1:1
+      ip extcommunity-list standard export-ext-community-set permit rt 1:1
+      ip bgp-community new-format
+      ip ssh time-out 60
+      ip ssh version 2
+      ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      !
+      route-map export-route-target permit 10
+      match extcommunity export-ext-community-set
+      !
+      route-map import-route-target permit 10
+      match extcommunity import-ext-community-set
+      !
+      mpls ldp router-id Loopback100 force
+      !
+      banner login ^CUnauthorized access is prohibited!^C
+      banner motd ^CWelcome to site2-rtr1^C
+      !
+      line vty 0 4
+      exec-timeout 30 0
+      absolute-timeout 60
+      session-limit 16
+      login local
+      transport input ssh
+      !
+      end
+    cpu_limit: 100
+    cpus: 1
+    data_volume: 0
+    hide_links: false
+    id: n10
+    image_definition: ''
+    label: site2-rtr1
+    node_definition: csr1000v
+    ram: 3072
+    tags: []
+    x: -250
+    y: 0
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+  - boot_disk_size: 0
+    configuration: |-
+      hostname site2-sw1
+      vrf definition Mgmt-intf
+      !
+      address-family ipv4
+      exit-address-family
+      !
+      address-family ipv6
+      exit-address-family
+      !
+      username admin privilege 15 secret 0 admin
+      cdp run
+      no aaa new-model
+      ip domain-name mdd.cisco.com
+      !
+      spanning-tree mode rapid-pvst
+      spanning-tree loopguard default
+      spanning-tree portfast edge default
+      spanning-tree portfast edge bpduguard default
+      spanning-tree extend system-id
+      !
+      interface GigabitEthernet0/0
+      no switchport
+      vrf forwarding Mgmt-intf
+      ip address dhcp
+      negotiation auto
+      no shutdown
+      no cdp enable
+      !
+      interface GigabitEthernet0/1
+      switchport trunk allowed vlan 10
+      switchport trunk encapsulation dot1q
+      switchport mode trunk
+      negotiation auto
+      spanning-tree portfast edge trunk
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      no shutdown
+      !
+      interface GigabitEthernet0/2
+      switchport access vlan 10
+      switchport mode access
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      no shutdown
+      !
+      interface GigabitEthernet0/3
+      no switchport
+      no ip address
+      negotiation auto
+      spanning-tree link-type point-to-point
+      spanning-tree guard root
+      no shutdown
+      !
+      ip http server
+      ip http secure-server
+      ip http max-connections 2
+      !
+      ip ssh time-out 60
+      ip ssh version 2
+      ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      !
+      line vty 0 4
+      exec-timeout 30 0
+      absolute-timeout 60
+      session-limit 16
+      login local
+      transport input ssh
+      !
+      end
+    cpu_limit: 100
+    cpus: 1
+    data_volume: 0
+    hide_links: false
+    id: n11
+    label: site2-sw1
+    node_definition: iosvl2
+    ram: 768
+    tags: []
+    x: -100
+    y: 0
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet1/0
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet1/1
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet1/2
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet1/3
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet2/0
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet2/1
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet2/2
+        slot: 10
+        type: physical
+      - id: i12
+        label: GigabitEthernet2/3
+        slot: 11
+        type: physical
+      - id: i13
+        label: GigabitEthernet3/0
+        slot: 12
+        type: physical
+      - id: i14
+        label: GigabitEthernet3/1
+        slot: 13
+        type: physical
+      - id: i15
+        label: GigabitEthernet3/2
+        slot: 14
+        type: physical
+      - id: i16
+        label: GigabitEthernet3/3
+        slot: 15
+        type: physical
+  - boot_disk_size: 64
+    configuration: |-
+      #cloud-config
+      hostname: site2-host1
+      manage_etc_hosts: True
+      system_info:
+        default_user:
+          name: ubuntu
+      password: admin
+      chpasswd: { expire: False }
+      write_files:
+        - path: /etc/cloud/cloud.cfg.d/99-no_networking.cfg
+          append: false
+          content: |
+            network: {config: disabled}
+            disable_network_activation: true
+        - path:  /opt/cisco/scripts/interfaces.sh
+          owner: root:root
+          permissions: '0755'
+          content: |
+            #!/usr/bin/env bash
+            NETPLAN_FILE=/etc/netplan/60-cloud-init.yaml
+            LINK_COUNT=`ip -o link | wc -l`
+            # The 1st interface should be lo, so start with the 2nd
+            for ((i=2; i<=${LINK_COUNT}; i++)); do
+              INT_INFO=$(ip -o link | sed -n "${i}p")
+              MAC_ADDR=$(echo "$INT_INFO" | sed -E 's/.*ether ([[:xdigit:]:]+).*/\1/')
+              INT_NAME=$(echo "$INT_INFO" | sed -E 's/[[:digit:]]+: ([[:alnum:]]+): .*/\1/')
+              sed -i -E "s/%MAC_ADDR_$(( $i - 1 ))%/${MAC_ADDR}/g" "$NETPLAN_FILE"
+              sed -i -E "s/%INT_NAME_$(( $i - 1 ))%/${INT_NAME}/g" "$NETPLAN_FILE"
+              ip link set up dev ${INT_NAME} || true
+            done
+        - path:  /etc/netplan/60-cloud-init.yaml
+          owner: root:root
+          permissions: '0644'
+          content: |
+            network:
+              version: 2
+              ethernets:
+                %INT_NAME_1%:
+                  match:
+                    macaddress: '%MAC_ADDR_1%'
+                  set-name: %INT_NAME_1%
+                  addresses: [192.168.2.100/24]
+                  routes:
+                  - to: default
+                    via: 192.168.2.1
+                  nameservers:
+                    addresses:
+                    - 8.8.8.8
+        - path:  /opt/cisco/scripts/pinger.sh
+          owner: root:root
+          permissions: '0755'
+          content: |
+            #!/usr/bin/env bash
+            # Set the duration in seconds (e.g., 3 hours)
+            duration=$((5 * 3600))  # 5 hours in seconds
+            end_time=$((SECONDS + duration))
+            while [ $SECONDS -lt $end_time ]; do
+              curl -s -o /dev/null --max-time 10 -i 20 https://dominantroute.com &
+              curl -s -o /dev/null --max-time 10 -i 15 https://www.github.com &
+              curl -s -o /dev/null --max-time 10 -i 10 https://www.baidu.com &
+              curl -s -o /dev/null --max-time 10 -i 15 https://www.cisco.com &
+              curl -s -o /dev/null --max-time 10 -i 15 https://www.ptt.cc &
+              curl -s -o /dev/null --max-time 10 -i 20 https://iha.com.tr &
+              curl -s -o /dev/null --max-time 10 -i 12 https://ahram.org.eg &
+              curl -s -o /dev/null --max-time 10 -i 20 https://www.wolterskluwer.nl &
+              curl -s -o /dev/null --max-time 10 -i 15 https://www.supersport.com &
+              curl -s -o /dev/null --max-time 10 -i 12 https://www.egynews.net &
+              curl -s -o /dev/null --max-time 10 -i 20 https://www.asus.com &
+              curl -s -o /dev/null --max-time 10 -i 20 https://www.property24.com &
+              curl -s -o /dev/null --max-time 10 -i 20 www.fnb.co.za &
+              wait
+            done
+        - path:  /etc/systemd/system/pinger.service
+          owner: root:root
+          permissions: '0644'
+          content: |
+            [Unit]
+            Description=Test service for pinging
+            [Service]
+            ExecStart=/bin/bash /opt/cisco/scripts/pinger.sh
+            [Install]
+            WantedBy=multi-user.target
+      runcmd:
+        - [/opt/cisco/scripts/interfaces.sh]
+        - [netplan, generate]
+        - [netplan, apply]
+        - [systemctl, daemon-reload]
+        - [systemctl, enable, pinger.service]
+        - [systemctl, start, --no-block, pinger.service]
+    cpu_limit: 100
+    cpus: 1
+    data_volume: 0
+    hide_links: false
+    id: n12
+    label: site2-host1
+    node_definition: ubuntu
+    ram: 2048
+    tags: []
+    x: 65
+    y: 0
+    interfaces:
+      - id: i0
+        label: ens2
+        slot: 0
+        type: physical
+  - boot_disk_size: 0
+    configuration: bridge0
+    cpu_limit: 100
+    cpus: 0
+    data_volume: 0
+    hide_links: false
+    id: n13
+    label: hq-mgmt-bridge
+    node_definition: external_connector
+    ram: 0
+    tags: []
+    x: -1200
+    y: -150
+    interfaces:
+      - id: i0
+        label: port
+        slot: 0
+        type: physical
+  - boot_disk_size: 0
+    configuration: ums-fc1fd0e1-7f
+    cpu_limit: 100
+    cpus: 0
+    data_volume: 0
+    hide_links: false
+    id: n14
+    label: hq-mgmt-switch
+    node_definition: unmanaged_switch
+    ram: 0
+    tags: []
+    x: -1065
+    y: -150
+    interfaces:
+      - id: i0
+        label: port0
+        slot: 0
+        type: physical
+      - id: i1
+        label: port1
+        slot: 1
+        type: physical
+      - id: i2
+        label: port2
+        slot: 2
+        type: physical
+      - id: i3
+        label: port3
+        slot: 3
+        type: physical
+      - id: i4
+        label: port4
+        slot: 4
+        type: physical
+      - id: i5
+        label: port5
+        slot: 5
+        type: physical
+      - id: i6
+        label: port6
+        slot: 6
+        type: physical
+      - id: i7
+        label: port7
+        slot: 7
+        type: physical
+  - boot_disk_size: 0
+    configuration: ums-6259a635-87
+    cpu_limit: 100
+    cpus: 0
+    data_volume: 0
+    hide_links: false
+    id: n15
+    label: site1-mgmt-switch
+    node_definition: unmanaged_switch
+    ram: 0
+    tags: []
+    x: -100
+    y: -400
+    interfaces:
+      - id: i0
+        label: port0
+        slot: 0
+        type: physical
+      - id: i1
+        label: port1
+        slot: 1
+        type: physical
+      - id: i2
+        label: port2
+        slot: 2
+        type: physical
+      - id: i3
+        label: port3
+        slot: 3
+        type: physical
+      - id: i4
+        label: port4
+        slot: 4
+        type: physical
+      - id: i5
+        label: port5
+        slot: 5
+        type: physical
+      - id: i6
+        label: port6
+        slot: 6
+        type: physical
+      - id: i7
+        label: port7
+        slot: 7
+        type: physical
+  - boot_disk_size: 0
+    configuration: bridge0
+    cpu_limit: 100
+    cpus: 0
+    data_volume: 0
+    hide_links: false
+    id: n16
+    label: site1-mgmt-bridge
+    node_definition: external_connector
+    ram: 0
+    tags: []
+    x: -100
+    y: -510
+    interfaces:
+      - id: i0
+        label: port
+        slot: 0
+        type: physical
+  - boot_disk_size: 0
+    configuration: ums-be55bfe4-ce
+    cpu_limit: 100
+    cpus: 0
+    data_volume: 0
+    hide_links: false
+    id: n17
+    label: site2-mgmt-switch
+    node_definition: unmanaged_switch
+    ram: 0
+    tags: []
+    x: -100
+    y: 100
+    interfaces:
+      - id: i0
+        label: port0
+        slot: 0
+        type: physical
+      - id: i1
+        label: port1
+        slot: 1
+        type: physical
+      - id: i2
+        label: port2
+        slot: 2
+        type: physical
+      - id: i3
+        label: port3
+        slot: 3
+        type: physical
+      - id: i4
+        label: port4
+        slot: 4
+        type: physical
+      - id: i5
+        label: port5
+        slot: 5
+        type: physical
+      - id: i6
+        label: port6
+        slot: 6
+        type: physical
+      - id: i7
+        label: port7
+        slot: 7
+        type: physical
+  - boot_disk_size: 0
+    configuration: bridge0
+    cpu_limit: 100
+    cpus: 0
+    data_volume: 0
+    hide_links: false
+    id: n18
+    label: site2-mgmt-bridge
+    node_definition: external_connector
+    ram: 0
+    tags: []
+    x: -100
+    y: 200
+    interfaces:
+      - id: i0
+        label: port
+        slot: 0
+        type: physical
+  - boot_disk_size: 64
+    configuration: |-
+      #cloud-config
+      hostname: nso1
+      manage_etc_hosts: True
+      system_info:
+        default_user:
+          name: ubuntu
+      password: admin
+      chpasswd: { expire: False }
+      ssh_pwauth: True
+      ssh_authorized_keys:
+         - your-ssh-pubkey-line-goes-here
+    cpu_limit: 100
+    cpus: 4
+    data_volume: 0
+    hide_links: false
+    id: n19
+    label: nso1
+    node_definition: ubuntu
+    ram: 8192
+    tags:
+      - nso
+    x: -1065
+    y: -55
+    interfaces:
+      - id: i0
+        label: ens2
+        slot: 0
+        type: physical
+      - id: i1
+        label: ens3
+        slot: 1
+        type: physical
+  - boot_disk_size: 0
+    configuration: bridge0
+    cpu_limit: 100
+    cpus: 0
+    data_volume: 0
+    hide_links: false
+    id: n20
+    label: internet-out
+    node_definition: external_connector
+    ram: 0
+    tags: []
+    x: -500
+    y: -510
+    interfaces:
+      - id: i0
+        label: port
+        slot: 0
+        type: physical
+  - boot_disk_size: 0
+    configuration: |-
+      hostname hq-pop
+      vrf definition Mgmt-intf
+      !
+      address-family ipv4
+      exit-address-family
+      !
+      address-family ipv6
+      exit-address-family
+      !
+      vrf definition internal_1
+      rd 1:1
+      !
+      address-family ipv4
+      exit-address-family
+      !
+      address-family ipv6
+      exit-address-family
+      !
+      !
+      !
+      flow record NetFlow-IN
+       match ipv4 tos
+       match ipv4 protocol
+       match ipv4 source address
+       match ipv4 destination address
+       match transport source-port
+       match transport destination-port
+       match interface input
+       collect interface output
+       collect counter bytes long
+       collect counter packets long
+       collect application name
+      !
+      !
+      flow record NetFlow-OUT
+       match ipv4 tos
+       match ipv4 protocol
+       match ipv4 source address
+       match ipv4 destination address
+       match transport source-port
+       match transport destination-port
+       match interface output
+       collect transport tcp flags
+       collect interface input
+       collect counter bytes long
+       collect counter packets long
+       collect application name
+      !
+      !
+      flow exporter NetFlow-To-Collector
+       source GigabitEthernet1
+       transport udp 2055
+       option interface-table
+       option exporter-stats
+       option application-table timeout 60
+       option application-attributes timeout 300
+      !
+      !
+      flow monitor NetFlow-Monitor-IN
+       description NetFlow Captures
+       exporter NetFlow-To-Collector
+       cache timeout inactive 10
+       cache timeout active 60
+       record NetFlow-IN
+      !
+      !
+      flow monitor NetFlow-Monitor-OUT
+       description NetFlow Captures
+       exporter NetFlow-To-Collector
+       cache timeout inactive 10
+       cache timeout active 60
+       record NetFlow-OUT
+      !
+      !
+      username admin privilege 15 secret 0 admin
+      cdp run
+      no aaa new-model
+      ip name-server 208.67.222.222 208.67.220.220
+      ip domain-name mdd.cisco.com
+      !
+      interface Loopback0
+      vrf forwarding internal_1
+      ip address 172.16.255.5 255.255.255.255
+      !
+      interface GigabitEthernet1
+      vrf forwarding Mgmt-intf
+      ip address dhcp
+      negotiation auto
+      no shutdown
+      no cdp enable
+      !
+      interface GigabitEthernet2
+      description 802.1q
+      no ip address
+      negotiation auto
+      cdp enable
+      no mop enabled
+      no shutdown
+      no mop sysid
+      !
+      interface GigabitEthernet2.10
+      description VLAN10
+      encapsulation dot1Q 10
+      vrf forwarding internal_1
+      ip address 172.16.0.50 255.255.255.0
+      ip nat inside
+      no shutdown
+      !
+      interface GigabitEthernet8
+      ip flow monitor NetFlow-Monitor-IN input
+      ip flow monitor NetFlow-Monitor-OUT output
+      ip address 10.0.254.2 255.255.255.252
+      ip nat outside
+      negotiation auto
+      cdp enable
+      no mop enabled
+      no mop sysid
+      no shutdown
+      !
+      router ospf 1 vrf internal_1
+      passive-interface Loopback0
+      network 172.16.0.50 0.0.0.0 area 0
+      network 172.16.255.5 0.0.0.0 area 0
+      default-information originate
+      !
+      router bgp 100
+      bgp log-neighbor-changes
+      no bgp default ipv4-unicast
+      neighbor 10.0.254.1 remote-as 99
+      neighbor 10.0.254.1 description ISP
+      !
+      address-family ipv4
+      neighbor 10.0.254.1 activate
+      exit-address-family
+      !
+      ip forward-protocol nd
+      ip http server
+      ip http secure-server
+      ip http max-connections 2
+      !
+      ip bgp-community new-format
+      ip nat inside source list nat-internal interface GigabitEthernet8 vrf internal_1 overload
+      ip route vrf internal_1 0.0.0.0 0.0.0.0 10.0.254.1 global
+      ip ssh time-out 60
+      ip ssh version 2
+      ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      !
+      ip access-list standard nat-internal
+      10 permit 10.0.0.0 0.255.255.255
+      20 permit 172.16.0.0 0.15.255.255
+      30 permit 192.168.0.0 0.0.255.255
+      !
+      banner login ^CUnauthorized access is prohibited!^C
+      banner motd ^CWelcome to hq-pop^C
+      !
+      line vty 0 4
+      exec-timeout 30 0
+      absolute-timeout 60
+      session-limit 16
+      login local
+      transport input ssh
+      !
+      ntp server 216.239.35.0
+      ntp server 216.239.35.4
+      !
+      end
+    cpu_limit: 100
+    cpus: 1
+    data_volume: 0
+    hide_links: false
+    id: n21
+    image_definition: ''
+    label: hq-pop
+    node_definition: csr1000v
+    ram: 3072
+    tags: []
+    x: -750
+    y: -400
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+  - boot_disk_size: 0
+    configuration: bridge0
+    cpu_limit: 100
+    cpus: 0
+    data_volume: 0
+    hide_links: false
+    id: n22
+    label: ISP-mgmt-bridge
+    node_definition: external_connector
+    ram: 0
+    tags: []
+    x: -500
+    y: -320
+    interfaces:
+      - id: i0
+        label: port
+        slot: 0
+        type: physical
+  - boot_disk_size: 0
+    configuration: |-
+      hostname ISP
+      vrf definition Mgmt-intf
+       !
+       address-family ipv4
+       exit-address-family
+       !
+       address-family ipv6
+       exit-address-family
+      !
+      username admin privilege 15 secret 0 admin
+      cdp run
+      no aaa new-model
+      ip domain-name mdd.cisco.com
+      !
+      ip http server
+      ip http secure-server
+      ip http max-connections 2
+      !
+      ip ssh time-out 60
+      ip ssh version 2
+      ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+      !
+      interface GigabitEthernet1
+       vrf forwarding Mgmt-intf
+       ip address dhcp
+       no shutdown
+       negotiation auto
+       no mop enabled
+       no mop sysid
+       no cdp enable
+      !
+      interface GigabitEthernet2
+       ip address 10.0.254.1 255.255.255.252
+       ip nat inside
+       no shutdown
+       negotiation auto
+       no mop enabled
+       no mop sysid
+       cdp enable
+      !
+      interface GigabitEthernet3
+       no ip address
+       shutdown
+       negotiation auto
+       no mop enabled
+       no mop sysid
+      !
+      interface GigabitEthernet4
+       no ip address
+       shutdown
+       negotiation auto
+       no mop enabled
+       no mop sysid
+      !
+      interface GigabitEthernet5
+       no ip address
+       shutdown
+       negotiation auto
+       no mop enabled
+       no mop sysid
+      !
+      interface GigabitEthernet6
+       no ip address
+       shutdown
+       negotiation auto
+       no mop enabled
+       no mop sysid
+      !
+      interface GigabitEthernet7
+       no ip address
+       shutdown
+       negotiation auto
+       no mop enabled
+       no mop sysid
+      !
+      interface GigabitEthernet8
+       ip address dhcp
+       ip nat outside
+       no shutdown
+       negotiation auto
+       no mop enabled
+       no mop sysid
+      !
+      router bgp 99
+       bgp log-neighbor-changes
+       no bgp default ipv4-unicast
+       neighbor 10.0.254.2 remote-as 100
+       !
+       address-family ipv4
+        redistribute static route-map to_bgp
+        neighbor 10.0.254.2 activate
+        default-information originate
+       exit-address-family
+      !
+      ip forward-protocol nd
+      no ip http server
+      ip http secure-server
+      ip http max-connections 2
+      !
+      ip bgp-community new-format
+      ip nat inside source list nat interface GigabitEthernet8 overload
+      ip route 0.0.0.0 0.0.0.0 GigabitEthernet8 dhcp
+      ip ssh time-out 60
+      ip ssh version 2
+      !
+      ip access-list standard nat
+      10 permit 10.0.0.0 0.255.255.255
+      20 permit 192.168.0.0 0.0.255.255
+      30 permit 172.16.0.0 0.15.255.255
+      !
+      !
+      !
+      ip prefix-list prefixes_to_bgp seq 10 permit 0.0.0.0/0
+      !
+      route-map to_bgp permit 10
+      match ip address prefix-list prefixes_to_bgp
+      !
+      line con 0
+       exec-timeout 0 0
+       stopbits 1
+      line vty 0 4
+       exec-timeout 30 0
+       absolute-timeout 60
+       session-limit 16
+       login local
+       transport input ssh
+      !
+      end
+    cpu_limit: 100
+    cpus: 1
+    data_volume: 0
+    hide_links: false
+    id: n23
+    image_definition: ''
+    label: ISP
+    node_definition: csr1000v
+    ram: 3072
+    tags: []
+    x: -500
+    y: -400
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet1
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet2
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet3
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet4
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet5
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet6
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet7
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet8
+        slot: 7
+        type: physical
+  - boot_disk_size: 64
+    configuration: |-
+      #cloud-config
+      hostname: telemetry
+      manage_etc_hosts: True
+      system_info:
+        default_user:
+          name: ubuntu
+      password: admin
+      chpasswd: { expire: False }
+      ssh_pwauth: True
+      ssh_authorized_keys:
+         - your-ssh-pubkey-line-goes-here
+    cpu_limit: 100
+    cpus: 4
+    data_volume: 0
+    hide_links: false
+    id: n24
+    label: telemetry
+    node_definition: ubuntu
+    ram: 10240
+    tags:
+      - telemetry
+    x: -1176
+    y: -51
+    interfaces:
+      - id: i0
+        label: ens2
+        slot: 0
+        type: physical
+      - id: i1
+        label: ens3
+        slot: 1
+        type: physical
