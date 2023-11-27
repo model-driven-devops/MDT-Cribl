@@ -68,7 +68,7 @@ The only thing you may want to edit in the telegraf config is adding additional 
 
 Once the MDT comes in, we are going to send it on it's way formatted as OpenTelemetry. If you are using seperate hosts, go ahead and add the IP for your cribl server. If not, you can use 0.0.0.0 since all containers will be running on the same host. Save your changes and lets move onto elasticsearch.
 
-### Setup Elasticsearch
+## Setup Elasticsearch
 
 Head back to the telemetry directory. If you want to change any settings for elasticsearch, it is done using a environment variable file. You may not see this in the directory, but if you use your text editor by typing sudo nano .env or sudo vi .env you will be able to change various settings.
 
