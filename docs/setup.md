@@ -26,4 +26,44 @@ You can take a look at the docker-compose.yml file if you want to make any chang
 - Cribl: This will be used to transform the data as it comes through telegraf.
 - Telegraf: This will be used to decode the MDT and convert it to OpenTelemetry.
 
-- 
+## Setup Telegraf
+
+Change into the telegraf directory located in the telemetry folder. Open the telegraf.conf file using your preferred text editor. You'll see the configuration is pretty basic (which is awesome!). The reason we need to insert telegraf into our workflow is to take advantage of its ability to decode the protocol used for MDT (model driven telemetry). MDT using gRPC to send data from the Cisco device to your preferred collector. After some frustrating work, it turns out gRPC and its encoder (protobuf) is not natively supported in some monitoring tools, so sending data directly to ElasticSearch for example, is not going to work. We need something like telegraf that can decode and understand MDT to help.
+
+### Telegraf Config
+One you open the telegraf.conf file, you'll notice it's very basic. We are just going to use the MDT telegraf plugin, define the port to listen on, and send the data on its way.
+
+```
+# Cisco MDT Telemetry
+[[inputs.cisco_telemetry_mdt]]
+  transport = "grpc"
+  service_address = ":57000"
+
+[[outputs.opentelemetry]]
+  service_address = "0.0.0.0:9420"
+```
+
+The only thing you may want to edit in the telegraf config is adding additional ports to listen on. This doesn't do much besides help seperate your data streams. In the configuring telemetry section, you'll see what I mean. If you want to add additional ports, the below example depicts how simple it is:
+
+```
+[[inputs.cisco_telemetry_mdt]]
+  transport = "grpc"
+  service_address = ":57000"
+
+[[inputs.cisco_telemetry_mdt]]
+  transport = "grpc"
+  service_address = ":57001"
+
+[[inputs.cisco_telemetry_mdt]]
+  transport = "grpc"
+  service_address = ":57002"
+
+[[inputs.cisco_telemetry_mdt]]
+  transport = "grpc"
+  service_address = ":57003"
+
+[[outputs.opentelemetry]]
+  service_address = "0.0.0.0:9420"
+```
+
+Once the MDT comes in, we are going to send it on it's way formatted as OpenTelemetry. If you are using seperate hosts, go ahead and add the IP for your cribl server. If not, you can use 0.0.0.0 since all containers will be running on the same host.
