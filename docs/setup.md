@@ -110,3 +110,31 @@ Its important to note that we are using a static encryption key, which should on
 sysctl -w vm.max_map_count=262144
 ```
 
+## Docker Compose
+
+Everything should be ready to go in the docker compose file. If you did happen to add additional ports to telegraf, you will want to make sure you open those ports in the compose file before executing it.
+
+```
+telegraf:
+    container_name: telegraf
+    image: telegraf:latest
+    ports:
+      - "57000:57000"
+      - "57001:57001"
+      - "57002:57002"
+      - "57003:57003"
+    volumes:
+      - ./conf/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+```
+Alright, lets go ahead and spin up our containers. Personally, I like to do a sudo docker compose up from the CML console, and then open a seperate SSH session if I need to do anything else to the containers. This way I can watch the container logs from the CML console. If you want to skip all that, you can just execute the compose in detached mode.
+
+```
+sudo docker compose up
+```
+
+Once the containers finish coming up, try to access them.
+- Kibana is port 5601
+- Cribl is port 9420
+
+If you can access both, lets start to configure some telemetry!
