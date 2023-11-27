@@ -66,4 +66,47 @@ The only thing you may want to edit in the telegraf config is adding additional 
   service_address = "0.0.0.0:9420"
 ```
 
-Once the MDT comes in, we are going to send it on it's way formatted as OpenTelemetry. If you are using seperate hosts, go ahead and add the IP for your cribl server. If not, you can use 0.0.0.0 since all containers will be running on the same host.
+Once the MDT comes in, we are going to send it on it's way formatted as OpenTelemetry. If you are using seperate hosts, go ahead and add the IP for your cribl server. If not, you can use 0.0.0.0 since all containers will be running on the same host. Save your changes and lets move onto elasticsearch.
+
+### Setup Elasticsearch
+
+Head back to the telemetry directory. If you want to change any settings for elasticsearch, it is done using a environment variable file. You may not see this in the directory, but if you use your text editor by typing sudo nano .env or sudo vi .env you will be able to change various settings.
+
+```
+# Password for the 'elastic' user (at least 6 characters)
+ELASTIC_PASSWORD=changeme
+
+# Password for the 'kibana_system' user (at least 6 characters)
+KIBANA_PASSWORD=changeme
+
+# Version of Elastic products
+STACK_VERSION=8.7.1
+
+# Set the cluster name
+CLUSTER_NAME=docker-cluster
+
+# Set to 'basic' or 'trial' to automatically start the 30-day trial
+LICENSE=basic
+#LICENSE=trial
+
+# Port to expose Elasticsearch HTTP API to the host
+ES_PORT=9200
+
+# Port to expose Kibana to the host
+KIBANA_PORT=5601
+
+# Increase or decrease based on the available host memory (in bytes)
+ES_MEM_LIMIT=1073741824
+KB_MEM_LIMIT=1073741824
+LS_MEM_LIMIT=1073741824
+
+
+# SAMPLE Predefined Key only to be used in POC environments
+ENCRYPTION_KEY=c34d38b3a14956121ff2170e5030b471551370178f43e5626eec58b04a30fae2
+```
+Its important to note that we are using a static encryption key, which should only be used for demos and pocs. Before we finish up with elasticsearch, we want to change the java heap setting for the host itself. Go ahead and execute this command:
+
+```
+sysctl -w vm.max_map_count=262144
+```
+
