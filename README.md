@@ -7,7 +7,7 @@ This repository is meant to be a guide for transforming and visualizing your net
 3. Enhnacing your data by adding some stuff to it as it makes it way into your visualiztion tool.
 
 ## Contents
-* [Topology Setup](docs/setup.md)
+* [Topology and Tools Setup](docs/setup.md)
 * [Configuring Telemetry](docs/telemetry.md)
 * 
 
