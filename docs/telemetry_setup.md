@@ -9,7 +9,6 @@ for the different catagories. If you take a look at the topoolgy, we have 3 site
 
 I reserved 10 subscription numbers for each telemetry catagory and 100 for each of the 5 devices. I understand that probably doesn't make sense, but here is my table with the ranges corresponding to subscription numbers:
 
-<p align="center">
 | Device | Total Range | Interface Range | BGP Range | SLA Range | OSPF Range |
 | --- | --- | --- | --- | --- | --- |
 | hq-pop | 0-99 | 0-9 | 10-19 | 20-29 | 30-39 |
@@ -18,7 +17,15 @@ I reserved 10 subscription numbers for each telemetry catagory and 100 for each 
 | site1-rtr1 | 300-399 | 300-309 | 310-319 | 320-329 | 330-339 |
 | site2-rtr1 | 400-499 | 400-409 | 410-419 | 420-429 | 430-439 |
 | telegraf ports | 57000-57004 | 57000 | 57001 | 57002 | 57003 |
-</p>
+
 
 Do you have to set things up this way? of course not. Do you need to plan for subscription numbers? Nope. Does it help when you start to deal with massive amounts of data? It sure does! Long story short, once you start parsing and transforming your data, you will notice things that may not look right. Having things organized like this will help you track down any MDT issues and fix them quickly.
+
+## Telemetry Configurations
+
+If you are not familiar with MDT, you need to know the x-path for the particular piece of data you want sent to your collector. If you want anything not documented in this repository, you will have to spend some time figuring out what that path is. To help with this, Cisco has a tool available called Yang suite. It's another docker compose file that you can run seperatly on the NSO node in the CML topology. We won't spend time on it here, because it's not very user friendly and I'm not even sure how I made it work.
+
+The instructions to deploy it can be found here: https://github.com/CiscoDevNet/yangsuite/
+
+
 
