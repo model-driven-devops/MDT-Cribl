@@ -42,7 +42,7 @@ However, I would recommend defining the interface in the xpath and just creating
 ```
 You can see in the topology image above the incoming interface is GigabitEthernet2. What I ended up doing was creating two subscriptions, one for the ingress interface and one for the egress. Here are the configs using the table above:
 
-#### HQ-POP Ingress Interface
+#### hq-pop Ingress Interface
 ```
 telemetry ietf subscription 1
  encoding encode-kvgpb
@@ -53,7 +53,7 @@ telemetry ietf subscription 1
  receiver ip address xx.xx.xx.xx 57000 protocol grpc-tcp
 ```
 
-#### HQ-POP Egress Interface
+#### hq-pop Egress Interface
 ```
 telemetry ietf subscription 2
  encoding encode-kvgpb
@@ -120,4 +120,24 @@ This one is a little cleaner, but you'll notice you end up with:
 - connection_total_established
 - connection_total_dropped
 
+Cool! Lets add another one. 
+
+#### site2-rtr1 BPG Neighbor Counters
+
+xpath
+```
+/bgp-state-data/neighbors/neighbor/bgp-neighbor-counters
+```
+
+MDT Config
+```
+telemetry ietf subscription 411
+ encoding encode-kvgpb
+ filter xpath /bgp-state-data/neighbors/neighbor/bgp-neighbor-counters
+ source-address 192.168.2.1
+ source-vrf internal_1
+ stream yang-push
+ update-policy periodic 1500
+ receiver ip address 192.133.187.43 57001 protocol grpc-tcp
+```
 
