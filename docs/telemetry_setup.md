@@ -1,7 +1,8 @@
 * [Telemetry Setup](telemetry-setup)
 * [Telemetry Configuration](#telemetry-configuration)
-  * [OpenTelemetry Source](#opentelemetry-source)
-  * [ElasticSearch Destination](#elasticsearch-destination)
+  * [Interface Telemetry](#interface-telemetry)
+  * [BGP Telemetry](#bgp-telemetry)
+  * [SLA Telemetry](#sla-telemetry)
     
 # Telemetry Setup
 
