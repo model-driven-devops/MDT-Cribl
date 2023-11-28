@@ -176,3 +176,8 @@ Some additional xpath filters you can try out are listed below:
 ```
 /bgp-state-data/neighbors/neighbor/transport
 ```
+```
+/bgp-state-data/address-families/address-family/bgp-neighbor-summaries/bgp-neighbor-summary
+```
+I will be adding more details as I make progress.
+
