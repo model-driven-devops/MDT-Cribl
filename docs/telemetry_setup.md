@@ -169,3 +169,10 @@ or
 filter xpath /bgp-state-data/neighbors/neighbor/bgp-neighbor-counters/recieved
 ```
 
+Some additional xpath filters you can try out are listed below:
+```
+/bgp-state-data/neighbors/neighbor/prefix-activity
+```
+```
+/bgp-state-data/neighbors/neighbor/transport
+```
