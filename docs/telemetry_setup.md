@@ -23,13 +23,13 @@ Do you have to set things up this way? of course not. Do you need to plan for su
 
 Just to note, this table will also help when I eventually Jinjafy the MDT configs.
 
-## Telemetry Configurations
+# Telemetry Configurations
 
 If you are not familiar with MDT, you need to know the x-path for the particular piece of data you want sent to your collector. If you want anything not documented in this repository, you will have to spend some time figuring out what that path is. To help with this, Cisco has a tool available called Yang suite. It's another docker compose file that you can run seperatly on the NSO node in the CML topology. We won't spend time on it here, because it's not very user friendly and I'm not even sure how I made it work.
 
 The instructions to deploy it can be found here: https://github.com/CiscoDevNet/yangsuite/
 
-### Interface Telemetry
+## Interface Telemetry
 
 This is the most common MDT configuration you see in user guides because it sends a good amount of useful data to help you monitor interface traffic. The main xpath if you are interested in statistics for all your interfaces on a device is:
 
@@ -42,7 +42,7 @@ However, I would recommend defining the interface in the xpath and just creating
 ```
 You can see in the topology image above the incoming interface is GigabitEthernet2. What I ended up doing was creating two subscriptions, one for the ingress interface and one for the egress. Here are the configs using the table above:
 
-#### hq-pop Ingress Interface
+### hq-pop Ingress Interface
 ```
 telemetry ietf subscription 1
  encoding encode-kvgpb
@@ -53,7 +53,7 @@ telemetry ietf subscription 1
  receiver ip address xx.xx.xx.xx 57000 protocol grpc-tcp
 ```
 
-#### hq-pop Egress Interface
+### hq-pop Egress Interface
 ```
 telemetry ietf subscription 2
  encoding encode-kvgpb
@@ -86,11 +86,11 @@ We will cover the output in more detail throughout the next section, but below i
 
 This should be enough to get you started. Now you can go to each device and fill in the values based on the table.
 
-### BGP Telemetry
+## BGP Telemetry
 
 This has been a tricky one. Trying to get decent data from BGP telemetry is, well, interesting. Below are the configurations that have worked so far on hq-rtr1, which is running BGP in our simulation, along with the expected output:
 
-#### HQ-RTR1 BGP Neighbor Connection
+### HQ-RTR1 BGP Neighbor Connection
 
 xpath
 ```
@@ -122,7 +122,7 @@ This one is a little cleaner, but you'll notice you end up with:
 
 Cool! Lets add another one. 
 
-#### site2-rtr1 BPG Neighbor Counters
+### site2-rtr1 BPG Neighbor Counters
 
 xpath
 ```
