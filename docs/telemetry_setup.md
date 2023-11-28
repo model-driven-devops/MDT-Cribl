@@ -188,3 +188,6 @@ Some additional xpath filters you can try out are listed below:
 ```
 I will be adding more details as I make progress.
 
+## SLA Telemetry
+
+## OSPF Telemetry
