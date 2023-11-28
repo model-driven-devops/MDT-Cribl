@@ -1,3 +1,8 @@
+* [Telemetry Setup](telemetry-setup)
+* [Telemetry Configuration](#telemetry-configuration)
+  * [OpenTelemetry Source](#opentelemetry-source)
+  * [ElasticSearch Destination](#elasticsearch-destination)
+    
 # Telemetry Setup
 
 Alright, now we have a place to send our telemetry. Lets turn it on. For this excercise, I focused on 4 different catagories of telemetry data and set up ranges of subscription numbers to reserve
