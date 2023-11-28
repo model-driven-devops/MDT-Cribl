@@ -107,4 +107,17 @@ telemetry ietf subscription 110
  update-policy periodic 1500
  receiver ip address xx.xx.xx.xx 57001 protocol grpc-tcp
 ````
+You'll notice I added the internal vrf to my MDT config and changed the port to 57001. Again, you do not have to do this port thing but I find it makes troubleshooting a little easier.
+
+<details>
+
+<summary>BGP Neighor Connection Output</summary>
+
+[{"instrumentation_library":{"name":"unknown","version":"unknown"},"metrics":[{"name":"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/connection_total_dropped","description":"","unit":"","data":{"data_points":[{"attributes":{"source":"hq-rtr1","subscription":"130","vrf_name":"default","afi_safi":"vpnv4-unicast","host":"f054a84bef4c","neighbor_id":"10.255.255.1","path":"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/connection"},"time_unix_nano":1701194817910000000,"exemplars":[],"value":0}]},"__type":"gauge"},{"name":"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/connection_total_established","description":"","unit":"","data":{"data_points":[{"attributes":{"source":"hq-rtr1","subscription":"130","vrf_name":"default","afi_safi":"vpnv4-unicast","host":"f054a84bef4c","neighbor_id":"10.255.255.1","path":"Cisco-IOS-XE-bgp-oper:bgp-state-data/neighbors/neighbor/connection"},"time_unix_nano":1701194817910000000,"exemplars":[],"value":1}]},"__type":"gauge"}],"schema_url":""}]
+</details>
+
+This one is a little cleaner, but you'll notice you end up with:
+- connection_total_established
+- connection_total_dropped
+
 
