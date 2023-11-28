@@ -63,7 +63,13 @@ telemetry ietf subscription 2
  update-policy periodic 1000
  receiver ip address xx.xx.xx.xx 57000 protocol grpc-tcp
 ```
+If you want to verify the configuration is valid, you can run the following commands:
 
-
+```
+show telemetry ietf subscription all
+```
+```
+show telemetry ietf subscription 1 detail
+```
 
 
