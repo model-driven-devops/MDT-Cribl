@@ -3,6 +3,7 @@
   * [Interface Telemetry](#interface-telemetry)
   * [BGP Telemetry](#bgp-telemetry)
   * [SLA Telemetry](#sla-telemetry)
+  * [OSPF Telemetry](#ospf-telemetry)
     
 # Telemetry Setup
 
