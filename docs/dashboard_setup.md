@@ -2,6 +2,7 @@
 
 * [Dashboard Setup](dashboard-setup)
   * [Create Dashboard](#create-dashboard)
+  * [Create Metrics](#create-metrics)
   * [Region Map](#region-map)
 
 # Dashboard Setup
@@ -60,11 +61,41 @@ Go ahead and save, which will add it to your dashboard. Give it a name and lets 
 
 ### Line Charts
 
+What's better than seeing live metrics? That's right! Metrics over time. Everyone loves seeing those peaks and valleys. Lets add another visualization but this time select the "Line" chart from the top. Now we want to start with using the timestamp as our horizontal access. 
+
+![Screenshot 2024-01-25 at 10 12 04 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/92ab2c97-2b0f-45b7-bded-5d4c552e1e03)
+
+Now lets drag our "value" field to the vertical access. Once you do that, select it and choose the "Last value" of value.
+
+![Screenshot 2024-01-25 at 10 15 31 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/55f59434-6452-443d-af9c-e9aa0cf99ab0)
+
+Now this is the cool part having organized data. You can really use this exact same line chart and replace it with any telemetry stream you want. Let's do SLAs for this first one. Drag the "sla.name.keyword" to breakdown. 
+
+![Screenshot 2024-01-25 at 10 23 45 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/ac85cb2d-7384-4e79-b862-43c2ad00b6a0)
+
+You may notice the "other" line on the chart. If you want to remove any of these fields, all you have to do is select it and filter it out.
+
+![Screenshot 2024-01-25 at 10 25 06 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/8b493a21-fad4-4c88-9308-58eafc9ffa3a)
+
+Go ahead and save the SLA line chart to your dashboard. Once saved, select it in the dashboard and clone it. On the cloned panel, click the gear in the top right and select "Edit Lens".
+
+![Screenshot 2024-01-25 at 10 26 55 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c05518e2-f06c-4cd1-9612-d386b72eeb1f)
+
+Remove the filter from the top, which was specfically for SLAs. Drag your interface.name.keyword field to the breakdown box. You'll see the interface lines pop up. Now go to Last value of value and change the metric to Bytes again.
+
+![Screenshot 2024-01-25 at 10 32 53 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/41f16d8c-4936-4e8c-b489-6c97ec8298a9)
+
+Not much traffic flowing through our simulated network anymore. Go ahead and filter out any fields you don't want. Then, depending on how long your telemetry has been collecting, go to the top and change the value of your time. 
+
+![Screenshot 2024-01-25 at 10 35 05 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/ee0eaa09-3bde-4ae1-8325-d57ed7c4d241)
+
+In the above example, I am now going back 15 days. You can see where my simulation was probably shut down and then turned back on. 
 
 
 ### Region Map
 
-Since we took some extra steps to get our geo-location sent into Elastic, lets start by creating a cool map to overlay some data on top of. If you hover over the location field, you'll see our correctly populated geo-points (I'm pretty excited about this).
+Since we took some extra steps to get our geo-location sent into Elastic, lets start by creating a cool map to overlay some d
+ata on top of. If you hover over the location field, you'll see our correctly populated geo-points (I'm pretty excited about this).
 
 ![Screenshot 2024-01-25 at 9 22 43 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/f2d52f9a-6975-42e6-ac63-08838a34dc01)
 ![Screenshot 2024-01-25 at 9 27 09 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/68aee205-17e2-45df-870f-be70dd21ce4b)
