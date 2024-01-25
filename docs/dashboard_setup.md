@@ -93,7 +93,12 @@ In the above example, I am now going back 15 days. You can see where my simulati
 
 ### Region Map
 
-Since we took some extra steps to get our geo-location sent into Elastic, lets start by creating a cool map to overlay some d
-ata on top of. If you hover over the location field, you'll see our correctly populated geo-points (I'm pretty excited about this).
+Since we took some extra steps to get our geo-location sent into Elastic, lets start by creating a cool map to overlay some data on top of. If you hover over the location field, you'll see our correctly populated geo-points (I'm pretty excited about this). Use the sidebar to nagivate to "Maps".
+
+![Screenshot 2024-01-25 at 12 41 08 PM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/88ef16ff-3b37-4930-8ff5-dae0a011701c)
+
+Select "Add Layer" and then selet "Documents". Now we want to select our dataset and then our Geolocation field.
+
+![Screenshot 2024-01-25 at 12 42 58 PM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/5a3f988e-e6a4-4827-93ae-c61a29486d3a)
 
 
