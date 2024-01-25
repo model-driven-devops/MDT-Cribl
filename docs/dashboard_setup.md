@@ -32,7 +32,7 @@ One helpful feature is the ability to click any field and see what data is avail
 Lets start by generating some basic metrics. Select the drop down menu on top of the empty visualization and select "Metric".
 
 <p align="center">
-<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/68aee205-17e2-45df-870f-be70dd21ce4b' width=70% height=70%>
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/68aee205-17e2-45df-870f-be70dd21ce4b' width=50% height=50%>
 </p>
 
 If you recall in earlier excercises, we cleaned up our data so "value" is its own field. What that means is any of the other fields can be used as almost a filter to display your "values".
