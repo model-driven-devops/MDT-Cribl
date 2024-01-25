@@ -38,7 +38,7 @@ Lets start by generating some basic metrics. Select the drop down menu on top of
 If you recall in earlier excercises, we cleaned up our data so "value" is its own field. What that means is any of the other fields can be used as almost a filter to display your "values".
 
 <p align="center">
-<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/4a174de7-8fe8-41a7-a52a-5c7a999820b9' width=70% height=70%>
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/4a174de7-8fe8-41a7-a52a-5c7a999820b9' width=50% height=50%>
 </p>
 
 In this example, we've selected "bgp.name.keyword" which shows us the fields tied to our BGP telemetry stream, along with the "value" associated with each field. 
@@ -56,19 +56,19 @@ To keep it simple, and because we are using this to visualize streaming telemetr
 Now lets try a field that contains more data. Drag "interface.name.keyword" onto the screen. Your metric boxes will reset. On the right side, move interface.name.keyword from "Primary Metric" to "Break down by". Now lets grab the "value" field from the left column and drag it to "Primary Metric". You'll see your interface data populate. 
 
 <p align="center">
-<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c17deaa4-b487-4756-a8d8-e8b0c06818d7' width=70% height=70%>
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c17deaa4-b487-4756-a8d8-e8b0c06818d7' width=50% height=50%>
 </p>
 
 Now lets clean it up. Select the "value" field under "primary metric". Change the function from "median" to "Last Value" to monitor the live data.
 
 <p align="center">
-<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/d3175911-07fe-4ea3-8fd4-bfccdf39f998' width=70% height=70%>
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/d3175911-07fe-4ea3-8fd4-bfccdf39f998' width=50% height=50%>
 </p>
 
 Now scroll down to "Appearance" and change the format to "Bytes". Since we are feeling nerdy, lets add a neat compute icon :).
 
 <p align="center">
-<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/8cc78953-bd03-4be8-ba54-c8dc7ae7ab0c' width=70% height=70%>
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/8cc78953-bd03-4be8-ba54-c8dc7ae7ab0c' width=50% height=50%>
 </p>
 
 Well will you look at that. Now we can see the bandwidth going in and out of our routers. It's almost like Elastic is made for this!
