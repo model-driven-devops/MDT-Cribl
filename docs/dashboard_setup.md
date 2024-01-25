@@ -89,13 +89,11 @@ Not much traffic flowing through our simulated network anymore. Go ahead and fil
 
 ![Screenshot 2024-01-25 at 10 35 05 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/ee0eaa09-3bde-4ae1-8325-d57ed7c4d241)
 
-In the above example, I am now going back 15 days. You can see where my simulation was probably shut down and then turned back on. 
-
+In the above example, I am now going back 15 days. You can see where my simulation was probably shut down and then turned back on. Go ahead and add any additional filters and then save it to the dashboard.
 
 ### Region Map
 
 Since we took some extra steps to get our geo-location sent into Elastic, lets start by creating a cool map to overlay some d
 ata on top of. If you hover over the location field, you'll see our correctly populated geo-points (I'm pretty excited about this).
 
-![Screenshot 2024-01-25 at 9 22 43 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/f2d52f9a-6975-42e6-ac63-08838a34dc01)
-![Screenshot 2024-01-25 at 9 27 09 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/68aee205-17e2-45df-870f-be70dd21ce4b)
+
