@@ -3,7 +3,7 @@
 * [Dashboard Setup](dashboard-setup)
   * [Create Dashboard](#create-dashboard)
   * [Create Metrics](#create-metrics)
-  * [Region Map](#region-map)
+  * [Create Map](#create-map)
 
 # Dashboard Setup
 
@@ -91,7 +91,7 @@ Not much traffic flowing through our simulated network anymore. Go ahead and fil
 
 In the above example, I am now going back 15 days. You can see where my simulation was probably shut down and then turned back on. Go ahead and add any additional filters and then save it to the dashboard.
 
-### Map
+### Create Map
 
 Since we took some extra steps to get our geo-location sent into Elastic, lets start by creating a cool map to overlay some data on top of. If you hover over the location field, you'll see our correctly populated geo-points (I'm pretty excited about this). Use the sidebar to nagivate to "Maps".
 
