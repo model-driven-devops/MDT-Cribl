@@ -56,6 +56,12 @@ Well will you look at that. Now we can see the bandwidth going in and out of our
 
 ![Screenshot 2024-01-25 at 10 02 22 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c088db42-3d25-47f0-8c4b-c1145afd99c8)
 
+Go ahead and save, which will add it to your dashboard. Give it a name and lets move on to the next visualization!
+
+### Line Charts
+
+
+
 ### Region Map
 
 Since we took some extra steps to get our geo-location sent into Elastic, lets start by creating a cool map to overlay some data on top of. If you hover over the location field, you'll see our correctly populated geo-points (I'm pretty excited about this).
