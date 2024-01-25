@@ -82,19 +82,19 @@ Go ahead and save, which will add it to your dashboard. Give it a name and lets 
 What's better than seeing live metrics? That's right! Metrics over time. Everyone loves seeing those peaks and valleys. Lets add another visualization but this time select the "Line" chart from the top. Now we want to start with using the timestamp as our horizontal access. 
 
 <p align="center">
-![Screenshot 2024-01-25 at 10 12 04 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/92ab2c97-2b0f-45b7-bded-5d4c552e1e03)
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/92ab2c97-2b0f-45b7-bded-5d4c552e1e03' width=70% height=70%>
 </p>
 
 Now lets drag our "value" field to the vertical access. Once you do that, select it and choose the "Last value" of value.
 
 <p align="center">
-![Screenshot 2024-01-25 at 10 15 31 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/55f59434-6452-443d-af9c-e9aa0cf99ab0)
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/55f59434-6452-443d-af9c-e9aa0cf99ab0' width=70% height=70%>
 </p>
 
 Now this is the cool part having organized data. You can really use this exact same line chart and replace it with any telemetry stream you want. Let's do SLAs for this first one. Drag the "sla.name.keyword" to breakdown. 
 
 <p align="center">
-![Screenshot 2024-01-25 at 10 23 45 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/ac85cb2d-7384-4e79-b862-43c2ad00b6a0)
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/ac85cb2d-7384-4e79-b862-43c2ad00b6a0' width=70% height=70%>
 </p>
 
 You may notice the "other" line on the chart. If you want to remove any of these fields, all you have to do is select it and filter it out.
