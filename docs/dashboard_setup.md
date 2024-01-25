@@ -3,6 +3,7 @@
 * [Dashboard Setup](dashboard-setup)
   * [Create Dashboard](#create-dashboard)
   * [Create Metrics](#create-metrics)
+  * [Create Graphs](#create-graphs)
   * [Create Map](#create-map)
 
 # Dashboard Setup
@@ -12,18 +13,19 @@ Now that data is coming into ElasticSearch, this section will go through the cre
 ## Create Dashboard
 
 Open up your Kibana instance and login. Once logged in, select the menu and navigate to Dashboards. Go ahead and select the "Create Dashboard" button. This is going to be where we add our visualizations.
-
-![Elastic-01](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/5a98bb01-aa69-46e3-97ee-3b1c398f005c)
+<p align="center">
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/5a98bb01-aa69-46e3-97ee-3b1c398f005c' width=70% height=70%>
+</p>
 
 Once you select "Create Dashboard", select "Create Visulization" to get started. You'll see all the awesome and simplified field options in the left bar and on the right will be where we select which fields we want to visualize. 
-
-![Screenshot 2024-01-25 at 9 13 30 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/ef501ebf-e514-427d-844b-06312bf694b5)
-
+<p align="center">
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/ef501ebf-e514-427d-844b-06312bf694b5' width=70% height=70%>
+</p>
 One helpful feature is the ability to click any field and see what data is available for visualizing.
 
 ![Screenshot 2024-01-25 at 9 15 00 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/bfb5c208-c00d-45cb-a931-a8c6f802594a)
 
-### Metrics
+### Create Metrics
 
 Lets start by generating some basic metrics. Select the drop down menu on top of the empty visualization and select "Metric".
 
@@ -59,7 +61,7 @@ Well will you look at that. Now we can see the bandwidth going in and out of our
 
 Go ahead and save, which will add it to your dashboard. Give it a name and lets move on to the next visualization!
 
-### Line Charts
+### Create Graphs
 
 What's better than seeing live metrics? That's right! Metrics over time. Everyone loves seeing those peaks and valleys. Lets add another visualization but this time select the "Line" chart from the top. Now we want to start with using the timestamp as our horizontal access. 
 
