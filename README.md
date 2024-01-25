@@ -10,4 +10,4 @@ This repository is meant to be a guide for transforming and visualizing your net
 * [Topology and Tools Setup](docs/setup.md) - This section covers using the included docker compose file to spin up the necessary containers. The containers deployed include Telegraf, Cribl, Elasticsearch and Kibana.
 * [Configuring Telemetry](docs/telemetry_setup.md) - This section covers configuring the network to start streaming telemetry to our monitoring containers.
 * [Transforming Data](docs/cribl_setup.md) - This section covers how to use Cribl to transform your data into something useable for visualizing.
-* [Visualizing Data](docs/elasticsearch_setup.md) - This section gives examples of visualizing your telemetry in Kibana.
+* [Visualizing Data](docs/dashboard_setup.md) - This section gives examples of visualizing your telemetry in Kibana.
