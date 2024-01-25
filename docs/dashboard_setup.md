@@ -142,7 +142,7 @@ Select "Add Layer" and then selet "Documents". Now we want to select our dataset
 Create a new layer. Add some tooltips that will be pop ups on the map that show the data you're looking for.
 
 <p align="center">
-<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/6989fa7a-0943-4a4d-b362-24979a11c71d' width=70% height=70%>
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/6989fa7a-0943-4a4d-b362-24979a11c71d' width=50% height=50%>
 </p>
 
 Go ahead and addd it to your dashboard. We will come back to this in another excercise. For now we just want to get our dashboard looking good.
