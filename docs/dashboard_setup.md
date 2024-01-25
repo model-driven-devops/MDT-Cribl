@@ -24,7 +24,7 @@ Once you select "Create Dashboard", select "Create Visulization" to get started.
 
 One helpful feature is the ability to click any field and see what data is available for visualizing.
 <p align="center">
-<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/bfb5c208-c00d-45cb-a931-a8c6f802594a' width=70% height=70%>
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/bfb5c208-c00d-45cb-a931-a8c6f802594a' width=50% height=50%>
 </p>
 
 ## Create Metrics
