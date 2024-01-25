@@ -40,7 +40,21 @@ To keep it simple, and because we are using this to visualize streaming telemetr
 
 ![Screenshot 2024-01-25 at 9 47 01 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/3aada136-a7f2-415a-a67d-95cab2026321)
 
+Now lets try a field that contains more data. Drag "interface.name.keyword" onto the screen. Your metric boxes will reset. On the right side, move interface.name.keyword from "Primary Metric" to "Break down by". Now lets grab the "value" field from the left column and drag it to "Primary Metric". You'll see your interface data populate. 
 
+![Screenshot 2024-01-25 at 9 56 34 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c17deaa4-b487-4756-a8d8-e8b0c06818d7)
+
+Now lets clean it up. Select the "value" field under "primary metric". Change the function from "median" to "Last Value" to monitor the live data.
+
+![Screenshot 2024-01-25 at 9 59 36 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/d3175911-07fe-4ea3-8fd4-bfccdf39f998)
+
+Now scroll down to "Appearance" and change the format to "Bytes". Since we are feeling nerdy, lets add a neat compute icon :).
+
+![Screenshot 2024-01-25 at 10 00 56 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/8cc78953-bd03-4be8-ba54-c8dc7ae7ab0c)
+
+Well will you look at that. Now we can see the bandwidth going in and out of our routers. It's almost like Elastic is made for this!
+
+![Screenshot 2024-01-25 at 10 02 22 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c088db42-3d25-47f0-8c4b-c1145afd99c8)
 
 ### Region Map
 
