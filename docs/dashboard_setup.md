@@ -21,6 +21,7 @@ Once you select "Create Dashboard", select "Create Visulization" to get started.
 <p align="center">
 <img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/ef501ebf-e514-427d-844b-06312bf694b5' width=70% height=70%>
 </p>
+
 One helpful feature is the ability to click any field and see what data is available for visualizing.
 <p align="center">
 <img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/bfb5c208-c00d-45cb-a931-a8c6f802594a' width=70% height=70%>
@@ -45,6 +46,7 @@ In this example, we've selected "bgp.name.keyword" which shows us the fields tie
 <p align="center">
 <img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/8c23249c-f0dd-4b74-8fa0-defe52bc023b' width=70% height=70%>
 </p>
+
 To keep it simple, and because we are using this to visualize streaming telemetry (live data), we are going to select the "Last Value of Data" and then we are going to break the data down by the top 5 values.
 
 <p align="center">
@@ -100,25 +102,25 @@ Now this is the cool part having organized data. You can really use this exact s
 You may notice the "other" line on the chart. If you want to remove any of these fields, all you have to do is select it and filter it out.
 
 <p align="center">
-![Screenshot 2024-01-25 at 10 25 06 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/8b493a21-fad4-4c88-9308-58eafc9ffa3a)
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/8b493a21-fad4-4c88-9308-58eafc9ffa3a' width=70% height=70%>
 </p>
 
 Go ahead and save the SLA line chart to your dashboard. Once saved, select it in the dashboard and clone it. On the cloned panel, click the gear in the top right and select "Edit Lens".
 
 <p align="center">
-![Screenshot 2024-01-25 at 10 26 55 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c05518e2-f06c-4cd1-9612-d386b72eeb1f)
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c05518e2-f06c-4cd1-9612-d386b72eeb1f' width=70% height=70%>
 </p>
 
 Remove the filter from the top, which was specfically for SLAs. Drag your interface.name.keyword field to the breakdown box. You'll see the interface lines pop up. Now go to Last value of value and change the metric to Bytes again.
 
 <p align="center">
-![Screenshot 2024-01-25 at 10 32 53 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/41f16d8c-4936-4e8c-b489-6c97ec8298a9)
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/41f16d8c-4936-4e8c-b489-6c97ec8298a9' width=70% height=70%>
 </p>
 
 Not much traffic flowing through our simulated network anymore. Go ahead and filter out any fields you don't want. Then, depending on how long your telemetry has been collecting, go to the top and change the value of your time. 
 
 <p align="center">
-![Screenshot 2024-01-25 at 10 35 05 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/ee0eaa09-3bde-4ae1-8325-d57ed7c4d241)
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/ee0eaa09-3bde-4ae1-8325-d57ed7c4d241' width=70% height=70%>
 </p>
 
 In the above example, I am now going back 15 days. You can see where my simulation was probably shut down and then turned back on. Go ahead and add any additional filters and then save it to the dashboard.
@@ -128,31 +130,31 @@ In the above example, I am now going back 15 days. You can see where my simulati
 Since we took some extra steps to get our geo-location sent into Elastic, lets start by creating a cool map to overlay some data on top of. If you hover over the location field, you'll see our correctly populated geo-points (I'm pretty excited about this). Use the sidebar to nagivate to "Maps".
 
 <p align="center">
-![Screenshot 2024-01-25 at 12 41 08 PM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/88ef16ff-3b37-4930-8ff5-dae0a011701c)
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/88ef16ff-3b37-4930-8ff5-dae0a011701c' width=70% height=70%>
 </p>
 
 Select "Add Layer" and then selet "Documents". Now we want to select our dataset and then our Geolocation field.
 
 <p align="center">
-![Screenshot 2024-01-25 at 12 42 58 PM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/5a3f988e-e6a4-4827-93ae-c61a29486d3a)
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/5a3f988e-e6a4-4827-93ae-c61a29486d3a' width=70% height=70%>
 </p>
 
 Create a new layer. Add some tooltips that will be pop ups on the map that show the data you're looking for.
 
 <p align="center">
-![Screenshot 2024-01-25 at 12 58 20 PM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/6989fa7a-0943-4a4d-b362-24979a11c71d)
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/6989fa7a-0943-4a4d-b362-24979a11c71d' width=70% height=70%>
 </p>
 
 Go ahead and addd it to your dashboard. We will come back to this in another excercise. For now we just want to get our dashboard looking good.
 
 <p align="center">
-![Screenshot 2024-01-25 at 1 00 39 PM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/17bc0151-e3c3-4124-a27f-c4140372f19d)
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/17bc0151-e3c3-4124-a27f-c4140372f19d' width=70% height=70%>
 </p>
 
 Now you just have to drag and organize all the visualizations the way you want them layed out. Once you do that, you can start adding some filters at the top using the "Controls" option.
 
 <p align="center">
-![Screenshot 2024-01-25 at 1 02 31 PM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/cffadf95-6d13-40b6-8903-fd4335dd27ad)
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/cffadf95-6d13-40b6-8903-fd4335dd27ad' width=70% height=70%>
 </p>
 
 There you go. Now you have a working dashboard displaying your telemetry.
