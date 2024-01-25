@@ -22,18 +22,23 @@ Once you select "Create Dashboard", select "Create Visulization" to get started.
 <img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/ef501ebf-e514-427d-844b-06312bf694b5' width=70% height=70%>
 </p>
 One helpful feature is the ability to click any field and see what data is available for visualizing.
+<p align="center">
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/bfb5c208-c00d-45cb-a931-a8c6f802594a' width=70% height=70%>
+</p>
 
-![Screenshot 2024-01-25 at 9 15 00 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/bfb5c208-c00d-45cb-a931-a8c6f802594a)
-
-### Create Metrics
+## Create Metrics
 
 Lets start by generating some basic metrics. Select the drop down menu on top of the empty visualization and select "Metric".
 
-![Screenshot 2024-01-25 at 9 27 09 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/68aee205-17e2-45df-870f-be70dd21ce4b)
+<p align="center">
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/68aee205-17e2-45df-870f-be70dd21ce4b' width=70% height=70%>
+</p>
 
 If you recall in earlier excercises, we cleaned up our data so "value" is its own field. What that means is any of the other fields can be used as almost a filter to display your "values".
 
-![Screenshot 2024-01-25 at 9 36 07 AM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/4a174de7-8fe8-41a7-a52a-5c7a999820b9)
+<p align="center"
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/4a174de7-8fe8-41a7-a52a-5c7a999820b9' width=70% height=70%>
+</p>
 
 In this example, we've selected "bgp.name.keyword" which shows us the fields tied to our BGP telemetry stream, along with the "value" associated with each field. 
 
@@ -61,7 +66,7 @@ Well will you look at that. Now we can see the bandwidth going in and out of our
 
 Go ahead and save, which will add it to your dashboard. Give it a name and lets move on to the next visualization!
 
-### Create Graphs
+## Create Graphs
 
 What's better than seeing live metrics? That's right! Metrics over time. Everyone loves seeing those peaks and valleys. Lets add another visualization but this time select the "Line" chart from the top. Now we want to start with using the timestamp as our horizontal access. 
 
@@ -93,7 +98,7 @@ Not much traffic flowing through our simulated network anymore. Go ahead and fil
 
 In the above example, I am now going back 15 days. You can see where my simulation was probably shut down and then turned back on. Go ahead and add any additional filters and then save it to the dashboard.
 
-### Create Map
+## Create Map
 
 Since we took some extra steps to get our geo-location sent into Elastic, lets start by creating a cool map to overlay some data on top of. If you hover over the location field, you'll see our correctly populated geo-points (I'm pretty excited about this). Use the sidebar to nagivate to "Maps".
 
