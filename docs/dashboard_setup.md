@@ -91,7 +91,7 @@ Not much traffic flowing through our simulated network anymore. Go ahead and fil
 
 In the above example, I am now going back 15 days. You can see where my simulation was probably shut down and then turned back on. Go ahead and add any additional filters and then save it to the dashboard.
 
-### Region Map
+### Map
 
 Since we took some extra steps to get our geo-location sent into Elastic, lets start by creating a cool map to overlay some data on top of. If you hover over the location field, you'll see our correctly populated geo-points (I'm pretty excited about this). Use the sidebar to nagivate to "Maps".
 
@@ -101,4 +101,17 @@ Select "Add Layer" and then selet "Documents". Now we want to select our dataset
 
 ![Screenshot 2024-01-25 at 12 42 58 PM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/5a3f988e-e6a4-4827-93ae-c61a29486d3a)
 
+Create a new layer. Add some tooltips that will be pop ups on the map that show the data you're looking for.
+
+![Screenshot 2024-01-25 at 12 58 20 PM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/6989fa7a-0943-4a4d-b362-24979a11c71d)
+
+Go ahead and addd it to your dashboard. We will come back to this in another excercise. For now we just want to get our dashboard looking good.
+
+![Screenshot 2024-01-25 at 1 00 39 PM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/17bc0151-e3c3-4124-a27f-c4140372f19d)
+
+Now you just have to drag and organize all the visualizations the way you want them layed out. Once you do that, you can start adding some filters at the top using the "Controls" option.
+
+![Screenshot 2024-01-25 at 1 02 31 PM](https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/cffadf95-6d13-40b6-8903-fd4335dd27ad)
+
+There you go. Now you have a working dashboard displaying your telemetry.
 
