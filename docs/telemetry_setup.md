@@ -190,4 +190,61 @@ I will be adding more details as I make progress.
 
 ## SLA Telemetry
 
+Hopefully by now you get the idea. Instead of outputting everything, here are some sample configs for both the router and telemetry stream.
+
+### Router Config
+
+This is a SLA config going from site1-rtr1 to hq-pop
+```
+ip sla 10
+ icmp-echo 172.16.0.50 source-ip 192.168.1.1
+  vrf internal_1
+  timeout 10000
+  frequency 15
+ip sla schedule 10 life forever start-time now
+```
+
+Here is another basic one for jitter.
+```
+ip sla 20
+ udp-jitter 172.16.0.50 65000 source-ip 192.168.1.1 source-port 50000
+  vrf internal_1
+  frequency 30
+ip sla schedule 20 life forever start-time now
+```
+
+HQ Pop is set up as a responder.
+```
+ip sla responder udp-echo ipaddress 172.16.0.50 port 5000 vrf internal_1
+```
+
+### Telemetry Configs
+
+The following config is for round trip time between the host and responder.
+```
+telemetry ietf subscription 303
+ encoding encode-kvgpb
+ filter xpath /ip-sla-stats/sla-oper-entry/stats/rtt
+ source-address 192.168.1.1
+ source-vrf internal_1
+ stream yang-push
+ update-policy periodic 1500
+ receiver ip address 192.133.187.43 57002 protocol grpc-tcp
+netconf-yang
+```
+
+and here is an example of collecting the total statistics.
+
+```
+telemetry ietf subscription 420
+ encoding encode-kvgpb
+ filter xpath /ip-sla-stats/sla-oper-total-statistics
+ source-address 192.168.2.1
+ source-vrf internal_1
+ stream yang-push
+ update-policy periodic 1500
+ receiver ip address 192.133.187.43 57002 protocol grpc-tcp
+```
+
 ## OSPF Telemetry
+
