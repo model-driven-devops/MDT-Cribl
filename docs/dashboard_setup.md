@@ -44,7 +44,7 @@ If you recall in earlier excercises, we cleaned up our data so "value" is its ow
 In this example, we've selected "bgp.name.keyword" which shows us the fields tied to our BGP telemetry stream, along with the "value" associated with each field. 
 
 <p align="center">
-<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/8c23249c-f0dd-4b74-8fa0-defe52bc023b' width=70% height=70%>
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/8c23249c-f0dd-4b74-8fa0-defe52bc023b' width=50% height=50%>
 </p>
 
 To keep it simple, and because we are using this to visualize streaming telemetry (live data), we are going to select the "Last Value of Data" and then we are going to break the data down by the top 5 values.
@@ -56,7 +56,7 @@ To keep it simple, and because we are using this to visualize streaming telemetr
 Now lets try a field that contains more data. Drag "interface.name.keyword" onto the screen. Your metric boxes will reset. On the right side, move interface.name.keyword from "Primary Metric" to "Break down by". Now lets grab the "value" field from the left column and drag it to "Primary Metric". You'll see your interface data populate. 
 
 <p align="center">
-<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c17deaa4-b487-4756-a8d8-e8b0c06818d7' width=50% height=50%>
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c17deaa4-b487-4756-a8d8-e8b0c06818d7' width=70% height=70%>
 </p>
 
 Now lets clean it up. Select the "value" field under "primary metric". Change the function from "median" to "Last Value" to monitor the live data.
@@ -74,7 +74,7 @@ Now scroll down to "Appearance" and change the format to "Bytes". Since we are f
 Well will you look at that. Now we can see the bandwidth going in and out of our routers. It's almost like Elastic is made for this!
 
 <p align="center">
-<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c088db42-3d25-47f0-8c4b-c1145afd99c8' width=70% height=70%>
+<img src='https://github.com/model-driven-devops/MDT-Cribl/assets/65776483/c088db42-3d25-47f0-8c4b-c1145afd99c8' width=50% height=50%>
 </p>
 
 Go ahead and save, which will add it to your dashboard. Give it a name and lets move on to the next visualization!
